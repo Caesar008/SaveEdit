@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65C5BF2B-F5CE-44C2-81D4-0E56237047C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SaveEdit</RootNamespace>
+    <AssemblyName>SaveEdit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Protect_Items_Prayer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fNbt, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\fNbt.dll</HintPath>
+    </Reference>
+    <Reference Include="Rozsirujici, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Rozsirujici.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="NacitamSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NacitamSave.Designer.cs">
+      <DependentUpon>NacitamSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NbtEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NbtEditor.Designer.cs">
+      <DependentUpon>NbtEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovyItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovyItem.Designer.cs">
+      <DependentUpon>NovyItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NacitamSave.resx">
+      <DependentUpon>NacitamSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtEditor.resx">
+      <DependentUpon>NbtEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovyItem.resx">
+      <DependentUpon>NovyItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_copy_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1102203_question_mark_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Enchantment_Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-40357_640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krizek.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\krizek.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PropertiesButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\bricks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\creeper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\curly_border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\diagonal_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\diagonal_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\diagonal_up_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\diagonal_up_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\gradient_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\half_horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\half_horizontal_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\half_vertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\half_vertical_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\mojang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\rhombus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\small_stripes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\square_bottom_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\square_bottom_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\square_top_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\square_top_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\straight_cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_downleft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_downright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\stripe_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\triangle_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\triangle_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\triangles_bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner\triangles_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compound.png" />
+    <None Include="Resources\string.png" />
+    <None Include="Resources\longArray.png" />
+    <None Include="Resources\long.png" />
+    <None Include="Resources\intArray.png" />
+    <None Include="Resources\float.png" />
+    <None Include="Resources\double.png" />
+    <None Include="Resources\byteArray.png" />
+    <None Include="Resources\short.png" />
+    <None Include="Resources\int.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\byte.png" />
+    <None Include="Resources\rename.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\unknown.png" />
+    <None Include="bin\Debug\Rozsirujici.dll" />
+    <Content Include="CZ.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="bin\Debug\fNbt.dll" />
+    <Content Include="Protect_Items_Prayer.ico" />
+    <None Include="Resources\Rozsirujici.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
