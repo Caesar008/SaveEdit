@@ -118,7 +118,7 @@ namespace SaveEdit
                                 }
                                 break;
                             case "compound":
-                                tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(), mandatory));
+                                tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                                 break;
                         }
                         if (tagValue.Attributes["req"] != null)
@@ -320,7 +320,6 @@ namespace SaveEdit
                                     break;
                                 case NbtTagType.Compound:
                                     tmpTag += "type=\"compound\" ";
-                                    //rekurzivně pak generovat
                                     break;
                             }
 
@@ -360,16 +359,14 @@ namespace SaveEdit
                                                 tmpTag += "<Value type=\"string\">" + tmpNtag.StringValue + "</Value>\r\n";
                                                 break;
                                             case NbtTagType.Compound:
-                                                tmpTag += "<Value type=\"compound\">" + "</Value>\r\n";
-                                                //rekurzivně pak generovat
+                                                tmpTag += "<Value type=\"compound\">" + RekurzivniLoadXml((NbtCompound)tmpNtag) + "</Value>\r\n";
                                                 break;
                                         }
                                     }
                                     tmpTag += "</Value>\r\n";
                                     break;
                                 case NbtTagType.Compound:
-                                    tmpTag += ">\r\n" + "</Value>\r\n";
-                                    //rekurzivně pak generovat
+                                    tmpTag += ">\r\n"+ RekurzivniLoadXml((NbtCompound)ntag) + "</Value>\r\n";
                                     break;
                             }
 
@@ -399,12 +396,56 @@ namespace SaveEdit
             }
         }
 
+        private string RekurzivniLoadXml(NbtCompound ntag)
+        {
+            string tmpTag = "";
+            foreach (NbtTag tmpNtag in ntag)
+            {
+                switch (tmpNtag.TagType)
+                {
+                    case NbtTagType.Byte:
+                        tmpTag += "<Value type=\"byte\" name=\""+ tmpNtag.Name + "\">" + tmpNtag.ByteValue + "</Value>\r\n";
+                        break;
+                    case NbtTagType.Int:
+                        tmpTag += "<Value type=\"int\" name=\""+ tmpNtag.Name + "\">" + tmpNtag.IntValue + "</Value>\r\n";
+                        break;
+                    case NbtTagType.String:
+                        tmpTag += "<Value type=\"string\" name=\""+ tmpNtag.Name + "\">" + tmpNtag.StringValue + "</Value>\r\n";
+                        break;
+                    case NbtTagType.Compound:
+                        tmpTag += "<Value type=\"compound\" name=\""+ tmpNtag.Name + "\">" + RekurzivniLoadXml((NbtCompound)tmpNtag) + "</Value>\r\n";
+                        
+                        break;
+                    case NbtTagType.List:
+                        tmpTag += "<Value type =\"list\" name=\"" + tmpNtag.Name + "\">\r\n";
+                        foreach (NbtTag tmpNNtag in ((NbtList)tmpNtag))
+                        {
+                            switch (tmpNNtag.TagType)
+                            {
+                                case NbtTagType.Byte:
+                                    tmpTag += "<Value type=\"byte\">" + tmpNNtag.ByteValue + "</Value>\r\n";
+                                    break;
+                                case NbtTagType.Int:
+                                    tmpTag += "<Value type=\"int\">" + tmpNNtag.IntValue + "</Value>\r\n";
+                                    break;
+                                case NbtTagType.String:
+                                    tmpTag += "<Value type=\"string\">" + tmpNNtag.StringValue + "</Value>\r\n";
+                                    break;
+                                case NbtTagType.Compound:
+                                    tmpTag += "<Value type=\"compound\">" + RekurzivniLoadXml((NbtCompound)tmpNNtag) + "</Value>\r\n";
+                                    break;
+                            }
+                        }
+                        tmpTag += "</Value>\r\n";
+                        break;
+                }
+                //tmpTag += "</Value>\r\n";
+            }
+            return tmpTag;
+        }
+
         private void ulozit_Click(object sender, EventArgs e)
         {
-            if (File.Exists("itemy-old.xml"))
-                File.Delete("itemy-old.xml");
-            if (File.Exists("itemy.xml"))
-                File.Move("itemy.xml", "itemy-old.xml");
             XmlDocument novyDokument = new XmlDocument();
             novyDokument.LoadXml("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<Itemy>\r\n</Itemy>");
             XmlNode verze = novyDokument.CreateElement("Verze");
@@ -583,14 +624,16 @@ namespace SaveEdit
                                         case NbtTagType.Compound:
                                             itemListTagValue.Attributes.Append(listAtt);
                                             itemListTagValue.Attributes["type"].Value = "compound";
-                                            //rekurzivně generovat
+                                            itemListTagValue = RekurzivniSave(novyDokument, (NbtCompound)tmpNtag, itemListTagValue);
+                                            //itemListTagValue.AppendChild(RekurzivniSave(novyDokument, (NbtCompound)tmpNtag, itemListTagValue));
                                             break;
                                     }
                                     itemTagValue.AppendChild(itemListTagValue);
                                 }
                                 break;
                             case NbtTagType.Compound:
-                                //rekurzivně generovat
+                                itemTagValue = RekurzivniSave(novyDokument, (NbtCompound)ntag, itemTagValue);
+                                //itemTagValue.AppendChild(RekurzivniSave(novyDokument, (NbtCompound)ntag, itemTagValue));
                                 break;
                         }
                         itemTag.AppendChild(itemTagValue);
@@ -629,7 +672,91 @@ namespace SaveEdit
             novyDokument.SelectSingleNode("Itemy").AppendChild(minecraft);
             novyDokument.SelectSingleNode("Itemy").AppendChild(itemy);
 
+            if (File.Exists("itemy-old.xml"))
+                File.Delete("itemy-old.xml");
+            if (File.Exists("itemy.xml"))
+                File.Move("itemy.xml", "itemy-old.xml");
             novyDokument.Save("itemy.xml");
+        }
+
+        private XmlNode RekurzivniSave(XmlDocument novyDokument, NbtCompound ntag, XmlNode itemTagValue)
+        {
+            foreach (NbtTag tmpNtag in ntag)
+            {
+                XmlNode itemListTagValue = novyDokument.CreateElement("Value");
+                XmlAttribute listAtt = novyDokument.CreateAttribute("type");
+                XmlAttribute listAttName = novyDokument.CreateAttribute("name");
+                switch (tmpNtag.TagType)
+                {
+                    case NbtTagType.Byte:
+                        itemListTagValue.Attributes.Append(listAtt);
+                        itemListTagValue.Attributes.Append(listAttName);
+                        itemListTagValue.Attributes["type"].Value = "byte";
+                        itemListTagValue.Attributes["name"].Value = tmpNtag.Name;
+                        itemListTagValue.InnerText = tmpNtag.ByteValue.ToString();
+                        break;
+                    case NbtTagType.Int:
+                        itemListTagValue.Attributes.Append(listAtt);
+                        itemListTagValue.Attributes.Append(listAttName);
+                        itemListTagValue.Attributes["type"].Value = "int";
+                        itemListTagValue.Attributes["name"].Value = tmpNtag.Name;
+                        itemListTagValue.InnerText = tmpNtag.IntValue.ToString();
+                        break;
+                    case NbtTagType.String:
+                        itemListTagValue.Attributes.Append(listAtt);
+                        itemListTagValue.Attributes.Append(listAttName);
+                        itemListTagValue.Attributes["type"].Value = "string";
+                        itemListTagValue.Attributes["name"].Value = tmpNtag.Name;
+                        itemListTagValue.InnerText = tmpNtag.StringValue;
+                        break;
+                    case NbtTagType.Compound:
+                        itemListTagValue.Attributes.Append(listAtt);
+                        itemListTagValue.Attributes.Append(listAttName);
+                        itemListTagValue.Attributes["type"].Value = "compound";
+                        itemListTagValue.Attributes["name"].Value = tmpNtag.Name;
+                        itemListTagValue = RekurzivniSave(novyDokument, (NbtCompound)tmpNtag, itemListTagValue);
+                        //itemListTagValue.AppendChild(RekurzivniSave(novyDokument, (NbtCompound)tmpNtag, itemListTagValue));
+                        break;
+                    case NbtTagType.List:
+                        itemListTagValue.Attributes.Append(listAtt);
+                        itemListTagValue.Attributes.Append(listAttName);
+                        itemListTagValue.Attributes["type"].Value = "list";
+                        itemListTagValue.Attributes["name"].Value = tmpNtag.Name;
+                        foreach (NbtTag tmpNNtag in ((NbtList)tmpNtag))
+                        {
+                            XmlNode itemListTagValue2 = novyDokument.CreateElement("Value");
+                            XmlAttribute listAtt2 = novyDokument.CreateAttribute("type");
+                            switch (tmpNtag.TagType)
+                            {
+                                case NbtTagType.Byte:
+                                    itemListTagValue2.Attributes.Append(listAtt2);
+                                    itemListTagValue2.Attributes["type"].Value = "byte";
+                                    itemListTagValue2.InnerText = tmpNNtag.ByteValue.ToString();
+                                    break;
+                                case NbtTagType.Int:
+                                    itemListTagValue2.Attributes.Append(listAtt2);
+                                    itemListTagValue2.Attributes["type"].Value = "int";
+                                    itemListTagValue2.InnerText = tmpNNtag.IntValue.ToString();
+                                    break;
+                                case NbtTagType.String:
+                                    itemListTagValue2.Attributes.Append(listAtt2);
+                                    itemListTagValue2.Attributes["type"].Value = "string";
+                                    itemListTagValue2.InnerText = tmpNNtag.StringValue;
+                                    break;
+                                case NbtTagType.Compound:
+                                    itemListTagValue2.Attributes.Append(listAtt2);
+                                    itemListTagValue2.Attributes["type"].Value = "compound";
+                                    itemListTagValue2 = RekurzivniSave(novyDokument, (NbtCompound)tmpNNtag, itemListTagValue2);
+                                    //itemListTagValue2.AppendChild(RekurzivniSave(novyDokument, (NbtCompound)tmpNNtag, itemListTagValue2));
+                                    break;
+                            }
+                            itemListTagValue.AppendChild(itemListTagValue2);
+                        }
+                        break;
+                }
+                itemTagValue.AppendChild(itemListTagValue);
+            }
+            return itemTagValue;
         }
 
         private void button1_Click(object sender, EventArgs e)
