@@ -174,7 +174,7 @@ namespace SaveEdit
         }
         private NbtCompound RecursiveTagLoad(XmlNode xmlItemTag, NbtCompound tag, List<string> mandatory)
         {
-            foreach (XmlNode tagValue in xmlItemTag.SelectNodes("Tag/Value"))
+            foreach (XmlNode tagValue in xmlItemTag.SelectNodes("Value"))
             {
                 //parametry v tagu itemu
                 switch (tagValue.Attributes["type"].InnerText)
@@ -210,7 +210,7 @@ namespace SaveEdit
                         }
                         break;
                     case "compound":
-                        tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(), mandatory));
+                        tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                         break;
                 }
                 if (tagValue.Attributes["req"] != null)
@@ -713,7 +713,7 @@ namespace SaveEdit
                                 }
                                 break;
                             case "compound":
-                                nbtTag.Add(RecursiveTagLoad(tagValue, new NbtCompound(), mandatory));
+                                nbtTag.Add(RecursiveTagLoad(tagValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                                 break;
                         }
                         if (tagValue.Attributes["req"] != null)
@@ -849,7 +849,7 @@ namespace SaveEdit
                             }
                             break;
                         case "compound":
-                            nbtTag.Add(RecursiveTagLoad(tagValue, new NbtCompound(), mandatory));
+                            nbtTag.Add(RecursiveTagLoad(tagValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                             break;
                     }
                     if (tagValue.Attributes["req"] != null)
