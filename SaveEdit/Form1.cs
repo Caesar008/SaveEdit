@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using fNbt;
 using Rozsirujici;
@@ -628,24 +628,24 @@ namespace SaveEdit
                 dokoncenoNacitaniBloku = false;
                 if (!InvokeRequired)
                 {
-                lbl_nacitaniItemu.Visible = true;
-                seznamBlocku.BeginUpdate();
-                seznamBlocku.Items.Clear();
-                seznamBlocku.SmallImageList.Images.Clear();
-                seznamBlocku.Update();
-                seznamBlockuSearch.BeginUpdate();
-                seznamBlockuSearch.Items.Clear();
-                seznamBlockuSearch.SmallImageList.Images.Clear();
+                    lbl_nacitaniItemu.Visible = true;
+                    seznamBlocku.BeginUpdate();
+                    seznamBlocku.Items.Clear();
+                    seznamBlocku.SmallImageList.Images.Clear();
+                    seznamBlocku.Update();
+                    seznamBlockuSearch.BeginUpdate();
+                    seznamBlockuSearch.Items.Clear();
+                    seznamBlockuSearch.SmallImageList.Images.Clear();
                 }
                 else
                 {
-                    this.BeginInvoke(new Action(() => lbl_nacitaniItemu.Visible = true));
-                    this.BeginInvoke(new Action(() => seznamBlocku.BeginUpdate()));
-                    this.BeginInvoke(new Action(() => seznamBlocku.Items.Clear()));
-                    this.BeginInvoke(new Action(() => seznamBlocku.SmallImageList.Images.Clear()));
-                    this.BeginInvoke(new Action(() => seznamBlockuSearch.BeginUpdate()));
-                    this.BeginInvoke(new Action(() => seznamBlockuSearch.Items.Clear()));
-                    this.BeginInvoke(new Action(() => seznamBlockuSearch.SmallImageList.Images.Clear()));
+                    this.Invoke(new Action(() => lbl_nacitaniItemu.Visible = true));
+                    this.Invoke(new Action(() => seznamBlocku.BeginUpdate()));
+                    this.Invoke(new Action(() => seznamBlocku.Items.Clear()));
+                    this.Invoke(new Action(() => seznamBlocku.SmallImageList.Images.Clear()));
+                    this.Invoke(new Action(() => seznamBlockuSearch.BeginUpdate()));
+                    this.Invoke(new Action(() => seznamBlockuSearch.Items.Clear()));
+                    this.Invoke(new Action(() => seznamBlockuSearch.SmallImageList.Images.Clear()));
                 }
 
                 Log.Write("Loading itemy.xml", Log.Verbosity.Info);
@@ -734,13 +734,13 @@ namespace SaveEdit
                                                 tag.Get<NbtList>(tagValue.Attributes["name"].InnerText).Add(new NbtInt(int.Parse(tagListValue.InnerText)));
                                                 break;
                                             case "compound":
-                                                tag.Get<NbtList>(tagValue.Attributes["name"].InnerText).Add(RecursiveTagLoad(tagListValue, new NbtCompound(), mandatory));
+                                                tag.Get<NbtList>(tagValue.Attributes["name"].InnerText).Add(RecursiveTagLoad(tagListValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                                                 break;
                                         }
                                     }
                                     break;
                                 case "compound":
-                                    tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(), mandatory));
+                                    tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                                     break;
                             }
                             if (tagValue.Attributes["req"] != null)
@@ -787,22 +787,22 @@ namespace SaveEdit
                         }
                     }
 
-                    /*if (!InvokeRequired)
-                    {*/
-                    seznamBlocku.SmallImageList.Images.Add(i.Image);
-                    seznamBlockuSearch.SmallImageList.Images.Add(i.Image);
-                    /*}
+                    if (!InvokeRequired)
+                    {
+                        seznamBlocku.SmallImageList.Images.Add(i.Image);
+                        seznamBlockuSearch.SmallImageList.Images.Add(i.Image);
+                    }
                     else
                     {
-                        this.BeginInvoke(new Action(() => seznamBlocku.SmallImageList.Images.Add(i.Image)));
-                        this.BeginInvoke(new Action(() => seznamBlockuSearch.SmallImageList.Images.Add(i.Image)));
-                    }*/
+                        this.Invoke(new Action(() => seznamBlocku.SmallImageList.Images.Add(i.Image)));
+                        this.Invoke(new Action(() => seznamBlockuSearch.SmallImageList.Images.Add(i.Image)));
+                    }
                     ListViewItem lvi = new ListViewItem(i.Name, seznamBlocku.SmallImageList.Images.Count - 1);
                     lvi.Tag = new Tag(i);
                     if (!InvokeRequired)
                         seznamBlocku.Items.Add(lvi);
                     else
-                        this.BeginInvoke(new Action(() => seznamBlocku.Items.Add(lvi)));
+                        this.Invoke(new Action(() => seznamBlocku.Items.Add(lvi)));
                     itemNum++;
                 }
 
@@ -814,9 +814,9 @@ namespace SaveEdit
                 }
                 else
                 {
-                    this.BeginInvoke(new Action(() => columnHeader1.AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent)));
-                    this.BeginInvoke(new Action(() => columnHeader1.AutoResize(ColumnHeaderAutoResizeStyle.None)));
-                    this.BeginInvoke(new Action(() => columnHeader2.Width = columnHeader1.Width));
+                    this.Invoke(new Action(() => columnHeader1.AutoResize(ColumnHeaderAutoResizeStyle.ColumnContent)));
+                    this.Invoke(new Action(() => columnHeader1.AutoResize(ColumnHeaderAutoResizeStyle.None)));
+                    this.Invoke(new Action(() => columnHeader2.Width = columnHeader1.Width));
                 }
 
                 if (!InvokeRequired)
@@ -829,8 +829,8 @@ namespace SaveEdit
                 }
                 else
                 {
-                    this.BeginInvoke(new Action(() => seznamBlocku.EndUpdate()));
-                    this.BeginInvoke(new Action(() => seznamBlockuSearch.EndUpdate()));
+                    this.Invoke(new Action(() => seznamBlocku.EndUpdate()));
+                    this.Invoke(new Action(() => seznamBlockuSearch.EndUpdate()));
                 }
                 //dokoncenoNacitaniBloku = true;
             }
@@ -870,13 +870,13 @@ namespace SaveEdit
                                     tag.Get<NbtList>(tagValue.Attributes["name"].InnerText).Add(new NbtInt(int.Parse(tagListValue.InnerText)));
                                     break;
                                 case "compound":
-                                    tag.Get<NbtList>(tagValue.Attributes["name"].InnerText).Add(RecursiveTagLoad(tagListValue, new NbtCompound(), mandatory));
+                                    tag.Get<NbtList>(tagValue.Attributes["name"].InnerText).Add(RecursiveTagLoad(tagListValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                                     break;
                             }
                         }
                         break;
                     case "compound":
-                        tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(), mandatory));
+                        tag.Add(RecursiveTagLoad(tagValue, new NbtCompound(tagValue.Attributes["name"].InnerText), mandatory));
                         break;
                 }
                 if (tagValue.Attributes["req"] != null)
