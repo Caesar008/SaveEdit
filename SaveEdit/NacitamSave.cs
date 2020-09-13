@@ -25,5 +25,23 @@ namespace SaveEdit
             else
                 nacitamSaveLbl.Text = form.jazyk.ReturnPreklad("Messages/LoadingSaveEdit", form.en);
         }
+
+        public void ReportProgress(int progress)
+        {
+            if (progressBar1.Style == ProgressBarStyle.Marquee)
+                progressBar1.Style = ProgressBarStyle.Blocks;
+            if (progress != 100)
+            {
+                if (progressBar1.Maximum != 101)
+                    progressBar1.Maximum = 101;
+                progressBar1.Value = progress + 1;
+            }
+            else
+            {
+                progressBar1.Value = progress + 1;
+                progressBar1.Maximum = 100;
+            }
+            progressBar1.Value = progress;
+        }
     }
 }

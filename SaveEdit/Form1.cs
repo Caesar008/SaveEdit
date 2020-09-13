@@ -812,6 +812,21 @@ namespace SaveEdit
                     else
                         this.Invoke(new Action(() => seznamBlocku.Items.Add(lvi)));
                     itemNum++;
+
+                    if (nsStart != null)
+                    {
+                        if (!InvokeRequired)
+                            nsStart.ReportProgress((int)((float)itemNum / (float)itemTotal * 100));
+                        else
+                            this.Invoke(new Action(() => nsStart.ReportProgress((int)((float)itemNum / (float)itemTotal * 100))));
+                    }
+                    if (ns != null)
+                    {
+                        if (!InvokeRequired)
+                            ns.ReportProgress((int)((float)itemNum / (float)itemTotal * 100));
+                        else
+                            this.Invoke(new Action(() => ns.ReportProgress((int)((float)itemNum / (float)itemTotal * 100))));
+                    }
                 }
 
                 if (!InvokeRequired)
