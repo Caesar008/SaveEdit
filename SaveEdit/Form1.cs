@@ -231,7 +231,6 @@ namespace SaveEdit
             lbl_pocet.Text = jazyk.ReturnPreklad("MainWindow/Count", en);
             lbl_poskozeni.Text = jazyk.ReturnPreklad("MainWindow/Damage", en);
             lbl_xpLevel.Text = jazyk.ReturnPreklad("MainWindow/XpLevel", en);
-            lbl_nacitaniItemu.Text = jazyk.ReturnPreklad("MainWindow/LoadingItems", en).Replace("\\r", "\r").Replace("\\n", "\n");
             lbl_zacit.Text = jazyk.ReturnPreklad("MainWindow/Begin", en);
             muzeHledat = false;
             vyhledavani.Text = jazyk.ReturnPreklad("MainWindow/Search", en);
@@ -247,8 +246,6 @@ namespace SaveEdit
         {
             custom = false;
             ClearButtonsAndShowInfo();
-            if (dokoncenoNacitaniBloku)
-                lbl_nacitaniItemu.Visible = false;
             vybranySave = e.ClickedItem.ToString();
 
             if (!backgroundWorker2.IsBusy)
@@ -580,7 +577,6 @@ namespace SaveEdit
             Log.Write("Loaded " + itemNum + " items out of " + itemTotal, Log.Verbosity.Info);
             seznamBlocku.Visible = true;
             seznamBlockuSearch.Visible = false;
-            lbl_nacitaniItemu.Visible = false;
             dokoncenoNacitaniBloku = true;
             vyhledavani.Enabled = true;
             if(toLoad)
@@ -642,7 +638,6 @@ namespace SaveEdit
                 dokoncenoNacitaniBloku = false;
                 if (!InvokeRequired)
                 {
-                    lbl_nacitaniItemu.Visible = true;
                     seznamBlocku.BeginUpdate();
                     seznamBlocku.Items.Clear();
                     seznamBlocku.SmallImageList.Images.Clear();
@@ -653,7 +648,6 @@ namespace SaveEdit
                 }
                 else
                 {
-                    this.Invoke(new Action(() => lbl_nacitaniItemu.Visible = true));
                     this.Invoke(new Action(() => seznamBlocku.BeginUpdate()));
                     this.Invoke(new Action(() => seznamBlocku.Items.Clear()));
                     this.Invoke(new Action(() => seznamBlocku.SmallImageList.Images.Clear()));

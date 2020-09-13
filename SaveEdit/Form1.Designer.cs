@@ -31,7 +31,6 @@ namespace SaveEdit
         /// </summary>
         private void InitializeComponent()
         {
-            this.Visible = false;
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -115,7 +114,6 @@ namespace SaveEdit
             this.vlastnosti = new System.Windows.Forms.Button();
             this.enchantyButton = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.lbl_nacitaniItemu = new System.Windows.Forms.Label();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -1238,15 +1236,6 @@ namespace SaveEdit
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
             this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_Complete);
             // 
-            // lbl_nacitaniItemu
-            // 
-            this.lbl_nacitaniItemu.AutoSize = true;
-            this.lbl_nacitaniItemu.Location = new System.Drawing.Point(601, 165);
-            this.lbl_nacitaniItemu.Name = "lbl_nacitaniItemu";
-            this.lbl_nacitaniItemu.Size = new System.Drawing.Size(134, 26);
-            this.lbl_nacitaniItemu.TabIndex = 62;
-            this.lbl_nacitaniItemu.Text = "Probíhá načítání seznamu\r\nitemů. Prosím, čekejte.";
-            // 
             // backgroundWorker3
             // 
             this.backgroundWorker3.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker3_DoWork);
@@ -1313,7 +1302,6 @@ namespace SaveEdit
             this.Controls.Add(this.kos);
             this.Controls.Add(this.vlastnosti);
             this.Controls.Add(this.enchantyButton);
-            this.Controls.Add(this.lbl_nacitaniItemu);
             this.Controls.Add(this.seznamBlocku);
             this.Controls.Add(this.seznamBlockuSearch);
             this.Controls.Add(this.xplevel);
@@ -1465,7 +1453,6 @@ namespace SaveEdit
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolTip popisek;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.Windows.Forms.Label lbl_nacitaniItemu;
         private System.Windows.Forms.ToolStripMenuItem nápovědaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changelogToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton kategorieBtn;
