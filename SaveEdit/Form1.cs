@@ -1168,6 +1168,17 @@ namespace SaveEdit
             return bitmapa;
         }
 
+        private void Pusunuto(object sender, System.EventArgs e)
+        {
+            if (ns != null)
+                ns.Location = new Point(this.Location.X + (this.Width / 2) - (ns.Width / 2), this.Location.Y + (this.Height / 2) - (ns.Height / 2));
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
 
         private void Ulozit()
         {
@@ -1254,22 +1265,12 @@ namespace SaveEdit
             
         }
 
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
         private void poslatNápadToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             
         }
 
         private void přidatItemDoSeznamuItemůToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            
-        }
-
-        private void Pusunuto(object sender, System.EventArgs e)
         {
             
         }

@@ -28,28 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nacitamSaveLbl = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.nacitamSaveLbl = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // nacitamSaveLbl
+            // panel1
             // 
-            this.nacitamSaveLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nacitamSaveLbl.Location = new System.Drawing.Point(12, 3);
-            this.nacitamSaveLbl.Name = "nacitamSaveLbl";
-            this.nacitamSaveLbl.Size = new System.Drawing.Size(327, 45);
-            this.nacitamSaveLbl.TabIndex = 0;
-            this.nacitamSaveLbl.Text = "Načítám save. Prosím čekej.";
-            this.nacitamSaveLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.nacitamSaveLbl);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(352, 82);
+            this.panel1.TabIndex = 0;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 51);
+            this.progressBar1.Location = new System.Drawing.Point(12, 52);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(328, 23);
             this.progressBar1.Step = 5;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 1;
+            this.progressBar1.TabIndex = 3;
+            // 
+            // nacitamSaveLbl
+            // 
+            this.nacitamSaveLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nacitamSaveLbl.Location = new System.Drawing.Point(12, 4);
+            this.nacitamSaveLbl.Name = "nacitamSaveLbl";
+            this.nacitamSaveLbl.Size = new System.Drawing.Size(327, 45);
+            this.nacitamSaveLbl.TabIndex = 2;
+            this.nacitamSaveLbl.Text = "Načítám save. Prosím čekej.";
+            this.nacitamSaveLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NacitamSave
             // 
@@ -57,8 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 82);
             this.ControlBox = false;
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.nacitamSaveLbl);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(352, 82);
@@ -68,13 +79,15 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = " ";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label nacitamSaveLbl;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label nacitamSaveLbl;
     }
 }
