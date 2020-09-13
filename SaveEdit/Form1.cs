@@ -255,7 +255,11 @@ namespace SaveEdit
             {
                     Nacti();
                 if (ns != null)
+                {
+                    foreach (Control c in this.Controls)
+                        c.Enabled = true;
                     ns.Close();
+                }
             }
             else
             {
@@ -291,6 +295,8 @@ namespace SaveEdit
                 }
             ResetItems();
 
+            foreach (Control c in this.Controls)
+                c.Enabled = false;
             ns.Show();
             ns.Refresh();
         }
@@ -407,7 +413,6 @@ namespace SaveEdit
             i0.Focus();
 
             poNacteni.Dispose();
-            //ns.Close();
 
             Log.Write("Selecting slot 0", Log.Verbosity.Info);
             VyberItem(0);
@@ -519,7 +524,11 @@ namespace SaveEdit
             {
                 NactiCustom();
                 if (ns != null)
+                {
+                    foreach (Control c in this.Controls)
+                        c.Enabled = true;
                     ns.Close();
+                }
             }
             else
             {
@@ -581,7 +590,11 @@ namespace SaveEdit
                 else
                     NactiCustom();
                 if (ns != null)
+                {
+                    foreach (Control c in this.Controls)
+                        c.Enabled = true;
                     ns.Close();
+                }
             }
             //label7.BackColor = Color.White;
             //}

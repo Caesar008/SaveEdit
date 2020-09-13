@@ -31,6 +31,7 @@ namespace SaveEdit
         /// </summary>
         private void InitializeComponent()
         {
+            this.Visible = false;
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
