@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rozsirujici</name>
+    </assembly>
+    <members>
+        <member name="T:Rozsirujici.Verze">
+            <summary>
+            Verze knihovny
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Verze.String">
+            <summary>
+            Textová verze knihovny
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Verze.Int">
+            <summary>
+            Číselná verze knihovny (int)
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.#ctor(System.String)">
+            <summary>
+            Vytváří instalnci pro načítání textu z xml souboru určeného pro překlad textů. Soubor má specifický formát.
+            Pokud je v paměti načten nějaký překlad, vytvoření nové instalce ho vymaže z paměti.
+            </summary>
+            <param name="cesta">Cesta k jazykovému souboru</param>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.ZmenitJazyk(System.String)">
+            <summary>
+            Změna jazyka za chodu programu. Zachová překlady uložené v paměti a načte k nim aktuální překlad.
+            V případě otevřených oken/načtených překladů je potřeba přenačíst texty pro aplikování jazkových změn.
+            Přenačtení je potřeba udělat v samotném programu, není možno v třídě Jazyk.
+            Pro okna, co byla zavřená a texty, co nebyly načteny, se o načtení aktuálního překladu postará třída Jazyk automaticky.
+            </summary>
+            <param name="cesta">Cesta k jazykovému souboru</param>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.ReturnPreklad(System.String,System.Boolean)">
+            <summary>
+            Vrací konkrétní text pro daný překlad. V případě prázdného překladu vrátí anglický překlad.
+            </summary>
+            <param name="text">Cesta v jazykovém xml souboru k danému překladu</param>
+            <param name="en">True, pokud se má použít EN</param>
+            <returns>Vrací text překladu k danému textu</returns>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.NacistDoPameti(System.String,System.Boolean)">
+            <summary>
+            Načte vybraný překlad do paměti pro zrychlení načítání textu překladu. Program ale bude zabírat více paměti.
+            Text, který není načtený v paměti, se načítá z disku.
+            </summary>
+            <param name="text">Cesta v jazykovém xml souboru k danému překladu</param>
+            <param name="en">True, pokud se má použít EN</param>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.SmazatZPameti(System.String)">
+            <summary>
+            Vymaže daný překlad z paměti. Vymazaný překlad se bude načítat z disku.
+            Program nebude zabírat tolik paměti, ale běh může být pomalejší.
+            </summary>
+            <param name="text">Cesta v jazykovém xml souboru k danému překladu</param>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.VyprazdnitPamet">
+            <summary>
+            Vymaže všechny překlady z paměti. Načítány budou opět z disku.
+            Program nebude zabírat tolik paměti, ale běh může být pomalejší.
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Jazyk.Jazyk.ReloadPamet(System.Boolean)">
+            <summary>
+            Přenačítá InterniPamet v případě změny jazyk za běhu programu
+            </summary>
+            <param name="en">True, pokud se má použít EN</param>
+        </member>
+        <member name="P:Rozsirujici.Jazyk.Jazyk.Zkratka">
+            <summary>
+            Zkratka jazyka, např. CZ
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Jazyk.Jazyk.Jmeno">
+            <summary>
+            Jméno jazyka, např. čeština
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Jazyk.Jazyk.Verze">
+            <summary>
+            Verze jazykového souboru
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Jazyk.Jazyk.Revize">
+            <summary>
+            Revize jazykového souboru
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Jazyk.Jazyk.InterniPamet">
+            <summary>
+            Překlady načtené do paměti pro zrychlení běhu programu
+            </summary>
+        </member>
+        <member name="P:Rozsirujici.Jazyk.Jazyk.Pamet">
+            <summary>
+            Vrátí kopii obsahu paměti překladů.
+            </summary>
+        </member>
+        <member name="T:Rozsirujici.Matematika.PrevodSoustav">
+            <summary>
+            Převádění čísel mezi soustavami
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Matematika.PrevodSoustav.Preved(System.String,System.Int32,System.Int32)">
+            <summary>
+            Převede dané číslo do dané soustavy
+            </summary>
+            <param name="cislo">Číslo k převedení</param>
+            <param name="zdrojova_soustava">Z jaké soustavy převádím</param>
+            <param name="cilova_soustava">Do jaké soustavy převádím</param>
+            <returns>Vrací cílové číslo jako text (string)</returns>
+        </member>
+        <member name="M:Rozsirujici.Matematika.PrevodSoustav.PrevedDoDesitkove(System.String,System.Int32)">
+            <summary>
+            Převede číslo do desítkové soustavy
+            </summary>
+            <param name="cislo">Číslo k převedení</param>
+            <param name="zdrojova_soustava">Vjaké soustavě toto číslo je</param>
+            <returns>Vrací převedené číslo</returns>
+        </member>
+        <member name="M:Rozsirujici.Matematika.PrevodSoustav.PrevedZDesitkove(System.Int32,System.UInt64)">
+            <summary>
+            Převede číslo z desítkové soustavy
+            </summary>
+            <param name="cilova_soustava">Cílová soustava</param>
+            <param name="cislo">Číslo k převedení</param>
+            <returns>Vrací string převedeného čísla</returns>
+        </member>
+        <member name="M:Rozsirujici.Matematika.PrevodSoustav.ConvertToInt(System.Char)">
+            <summary>
+            Převede znak na číslo
+            </summary>
+            <param name="ch">Znak k převedení</param>
+            <returns>Vrací číslo znaku</returns>
+        </member>
+        <member name="M:Rozsirujici.Matematika.PrevodSoustav.ConvertToChar(System.UInt64)">
+            <summary>
+            Převede číslo na odpovídající znak
+            </summary>
+            <param name="cislo">Číslo k převedení</param>
+            <returns>Vrací char</returns>
+        </member>
+        <member name="T:Rozsirujici.Program.Update">
+            <summary>
+            Slouží k aktualizaci programu a knihoven daného programu
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Program.Update.UpdateProgramAndRun(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Aktualizuje samotný exe soubor a restartuje program
+            </summary>
+            <param name="form">Hlavní Form programu</param>
+            <param name="fileName">Jméno souboru programu</param>
+        </member>
+        <member name="M:Rozsirujici.Program.Update.UpdateProgramAndRun(System.Windows.Forms.Form,System.String,System.String[])">
+            <summary>
+            Aktualizuje exe soubor a knihovny a restartuje program
+            </summary>
+            <param name="form">Hlavní Form programu</param>
+            <param name="fileName">Jméno souboru programu</param>
+            <param name="dllNames">Pole názvů souborů knihoven</param>
+        </member>
+        <member name="M:Rozsirujici.Program.Update.UpdateProgram(System.Windows.Forms.Form,System.String)">
+            <summary>
+            Aktualizuje samotný exe soubor
+            </summary>
+            <param name="form">Hlavní Form programu</param>
+            <param name="fileName">Jméno souboru programu</param>
+        </member>
+        <member name="M:Rozsirujici.Program.Update.UpdateProgram(System.Windows.Forms.Form,System.String,System.String[])">
+            <summary>
+            Aktualizuje exe soubor a knihovny
+            </summary>
+            <param name="form">Hlavní Form programu</param>
+            <param name="fileName">Jméno souboru programu</param>
+            <param name="dllNames">Pole názvů souborů knihoven</param>
+        </member>
+        <member name="T:Rozsirujici.Sifrovani.AES">
+            <summary>
+            Šifrování textu
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Sifrovani.AES.Zasifruj(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            Zašifruje daný text
+            </summary>
+            <param name="Text">Text k zašifrování</param>
+            <param name="Heslo">Heslo (klíč) k šifrování</param>
+            <param name="Salt">Salt (seed)</param>
+            <param name="HashAlgorithm">Hashovací algoritmus</param>
+            <param name="PasswordIterations">Iterace hesla</param>
+            <param name="InitialVector">Inicializační vektor</param>
+            <param name="KeySize">Velikost klíče</param>
+            <returns>Vrací zašifrovaný text</returns>
+        </member>
+        <member name="M:Rozsirujici.Sifrovani.AES.Rozsifruj(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="TextSifry">Šifrovaný text</param>
+            <param name="Heslo">Heslo (klíč) k dešifrování</param>
+            <param name="Salt">Salt (seed)</param>
+            <param name="HashAlgorithm">Hashovací algoritmus</param>
+            <param name="PasswordIterations">Iterace hesla</param>
+            <param name="InitialVector">Inicializační vektor</param>
+            <param name="KeySize">Velikost klíče</param>
+            <returns>Vrací dešifrovaný text při úspěchu, jinak výjimku</returns>
+        </member>
+        <member name="T:Rozsirujici.Program.JednaInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Program.JednaInstance.Bezi">
+            <summary>
+            Zjišťuje, jestli je program spuštěn z jeho vlastního umístění
+            </summary>
+            <returns>Vrací boolean</returns>
+        </member>
+        <member name="M:Rozsirujici.Program.JednaInstance.BeziGlobalne(System.TimeSpan,System.String)">
+            <summary>
+            Zjišťuje, jestli na počítači běží jiná instance programu s daným jménem
+            </summary>
+            <param name="cekaciDoba">Doba, po kterou se má program pokusit spustit</param>
+            <param name="jmeno">Jméno programu, který kontrolujeme</param>
+            <returns>Vrací true, pokud je program spuštěn, false, pokud žádná jiná instance programu neběží</returns>
+        </member>
+        <member name="M:Rozsirujici.Program.JednaInstance.UvolniProstredek">
+            <summary>
+            Uvolní mutex vytvořený metodou BeziGlobalne(). Doporučené umístění je try{ vlastní kód programu } finaly { UvolniProstredek(); }.
+            </summary>
+        </member>
+        <member name="T:Rozsirujici.Grafika.Obrazek">
+            <summary>
+            Umožňuje práci s obrázky
+            </summary>
+        </member>
+        <member name="M:Rozsirujici.Grafika.Obrazek.ResizeBMP(System.Drawing.Bitmap,System.Int32,System.Int32,Rozsirujici.Grafika.Obrazek.PomerStran)">
+            <summary>
+            Umožňuje změnit velikost obrázku a poměr stran.
+            </summary>
+            <param name="bitmapa">Zdrojová bitmapa</param>
+            <param name="novaSirka">Cílová šířka obrázku</param>
+            <param name="novaVyska">Cílová výška obrázku</param>
+            <param name="pomerStran">Cílový poměr stran</param>
+            <returns>Vrací novou bitmapu</returns>
+        </member>
+        <member name="M:Rozsirujici.Grafika.Obrazek.AddText(System.Drawing.Bitmap,System.String,System.Drawing.Brush,System.Drawing.FontFamily,System.Drawing.FontStyle,System.Single,System.Drawing.Point)">
+            <summary>
+            Přidává text do obrázku (bitmapy)
+            </summary>
+            <param name="bitmapa">Zdrojová bitmapa</param>
+            <param name="text">Text</param>
+            <param name="barva">Barva textu</param>
+            <param name="fontFamily">Font</param>
+            <param name="fontStyle">FontStyle</param>
+            <param name="velikost">Velikost textu</param>
+            <param name="umisteni">Umístění levého horního rohu textu v obrázku</param>
+            <returns>Vrací novou bitmapu</returns>
+        </member>
+        <member name="M:Rozsirujici.Grafika.Obrazek.AddText(System.Drawing.Bitmap,System.String,System.Drawing.Brush,System.Drawing.Color,System.Drawing.FontFamily,System.Drawing.FontStyle,System.Single,System.Drawing.Point)">
+            <summary>
+            Přidává text do obrázku (bitmapy)
+            </summary>
+            <param name="bitmapa">Zdrojová bitmapa</param>
+            <param name="text">Text</param>
+            <param name="barva">Barva textu</param>
+            <param name="barvaOhraniceni">Barva ohraničení textu</param>
+            <param name="fontFamily">Font</param>
+            <param name="fontStyle">FontStyle</param>
+            <param name="velikost">Velikost textu</param>
+            <param name="umisteni">Umístění levého horního rohu textu v obrázku</param>
+            <returns>Vrací novou bitmapu</returns>
+        </member>
+        <member name="T:Rozsirujici.Grafika.Obrazek.PomerStran">
+            <summary>
+            Poměr stran obrázku
+            </summary>
+        </member>
+        <member name="F:Rozsirujici.Grafika.Obrazek.PomerStran.Originální">
+            <summary>
+            Zachová originální poměr stran obrázku
+            </summary>
+        </member>
+        <member name="F:Rozsirujici.Grafika.Obrazek.PomerStran.Cílový">
+            <summary>
+            Poměr stran obrázku se přizpůsobí cílovým rozměrům obrázku
+            </summary>
+        </member>
+        <member name="F:Rozsirujici.Grafika.Obrazek.PomerStran.Pomer4ku3">
+            <summary>
+            Poměr stran bude změněn na 4:3
+            </summary>
+        </member>
+        <member name="F:Rozsirujici.Grafika.Obrazek.PomerStran.Pomer16ku9">
+            <summary>
+            Poměr stran bude změněn na 16:9
+            </summary>
+        </member>
+    </members>
+</doc>
