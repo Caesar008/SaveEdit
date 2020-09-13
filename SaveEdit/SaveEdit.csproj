@@ -106,6 +106,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Release\SaveEdit.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -282,6 +283,7 @@
     <None Include="Resources\arr.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\DllUpdater.exe" />
     <None Include="Resources\compound.png" />
     <None Include="Resources\string.png" />
     <None Include="Resources\longArray.png" />
@@ -298,6 +300,20 @@
     <None Include="Resources\edit.png" />
     <None Include="Resources\unknown.png" />
     <None Include="bin\Debug\Rozsirujici.dll" />
+    <Content Include="bin\Debug\ArmorSlotPics.png" />
+    <Content Include="bin\Debug\items.png" />
+    <Content Include="bin\Debug\itemy.xml" />
+    <Content Include="bin\Debug\terrain.png" />
+    <Content Include="bin\Release\CZ.xml" />
+    <Content Include="bin\Release\fNbt.dll" />
+    <Content Include="bin\Release\fNbt.xml" />
+    <Content Include="bin\Release\items.png" />
+    <Content Include="bin\Release\itemy.xml" />
+    <Content Include="bin\Release\Rozsirujici.dll" />
+    <Content Include="bin\Release\Rozsirujici.xml" />
+    <Content Include="bin\Release\SaveEdit.exe" />
+    <Content Include="bin\Release\SaveEdit.pdb" />
+    <Content Include="bin\Release\terrain.png" />
     <Content Include="CZ.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

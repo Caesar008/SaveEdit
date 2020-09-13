@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveEdit", "SaveEdit\SaveEdit.csproj", "{65C5BF2B-F5CE-44C2-81D4-0E56237047C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DllUpdater", "DllUpdater\DllUpdater.csproj", "{D4A42584-98CE-42F6-B01A-AB2C44C8588F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{65C5BF2B-F5CE-44C2-81D4-0E56237047C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C5BF2B-F5CE-44C2-81D4-0E56237047C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C5BF2B-F5CE-44C2-81D4-0E56237047C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A42584-98CE-42F6-B01A-AB2C44C8588F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A42584-98CE-42F6-B01A-AB2C44C8588F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A42584-98CE-42F6-B01A-AB2C44C8588F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A42584-98CE-42F6-B01A-AB2C44C8588F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE6E3405-8FB4-44A8-BFC2-3243AA5D5009}
 	EndGlobalSection
 EndGlobal

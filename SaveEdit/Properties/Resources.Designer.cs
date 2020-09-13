@@ -251,16 +251,6 @@ namespace SaveEdit.Properties {
         }
         
         /// <summary>
-        ///   Vyhledává lokalizovaný prostředek typu System.Byte[].
-        /// </summary>
-        internal static byte[] CZ {
-            get {
-                object obj = ResourceManager.GetObject("CZ", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap diagonal_left {
@@ -301,6 +291,16 @@ namespace SaveEdit.Properties {
         }
         
         /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Byte[].
+        /// </summary>
+        internal static byte[] DllUpdater {
+            get {
+                object obj = ResourceManager.GetObject("DllUpdater", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap edit {
@@ -327,16 +327,6 @@ namespace SaveEdit.Properties {
             get {
                 object obj = ResourceManager.GetObject("flower", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledává lokalizovaný prostředek typu System.Byte[].
-        /// </summary>
-        internal static byte[] fNbt {
-            get {
-                object obj = ResourceManager.GetObject("fNbt", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         
@@ -537,16 +527,6 @@ namespace SaveEdit.Properties {
             get {
                 object obj = ResourceManager.GetObject("rhombus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Vyhledává lokalizovaný prostředek typu System.Byte[].
-        /// </summary>
-        internal static byte[] Rozsirujici {
-            get {
-                object obj = ResourceManager.GetObject("Rozsirujici", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

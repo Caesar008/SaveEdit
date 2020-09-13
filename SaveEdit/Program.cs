@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace SaveEdit
 {
@@ -19,28 +20,68 @@ namespace SaveEdit
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
 
-            if (Properties.Settings.Default.Lang == "")
+            if (File.Exists("DllUpdater.exe"))
+                File.Delete("DllUpdater.exe");
+
+            FileVersionInfo fi = FileVersionInfo.GetVersionInfo("fNbt.dll");
+
+            if (Properties.Settings.Default.Lang == "" && fi.ProductVersion != "0.6.4.0")
             {
                 //kvůli updatu z předchozích verzí
-                if (File.Exists("fNbt.dll"))
-                    File.Delete("fNbt.dll");
+                File.WriteAllBytes("DllUpdater.exe", Properties.Resources.DllUpdater);
                 Log.Write("Removing old fNbt.dll", Log.Verbosity.Info);
+                Process.Start("DllUpdater.exe");
+                Application.Exit();
             }
 
             if (!File.Exists("Rozsirujici.dll"))
             {
-                Log.Write("Extracting Rozsirujici.dll", Log.Verbosity.Info);
-                File.WriteAllBytes("Rozsirujici.dll", Properties.Resources.Rozsirujici);
+                Log.Write("Downloading Rozsirujici.dll", Log.Verbosity.Info);
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/Rozsirujici.dll", "Rozsirujici.dll");
+                wc.Dispose();
             }
             if (!File.Exists("fNbt.dll"))
             {
-                Log.Write("Extracting fNbt.dll", Log.Verbosity.Info);
-                File.WriteAllBytes("fNbt.dll", Properties.Resources.fNbt);
+                Log.Write("Downloading fNbt.dll", Log.Verbosity.Info);
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/fNbt.dll", "fNbt.dll");
+                wc.Dispose();
             }
             if (!File.Exists("CZ.xml") || Application.ProductVersion.Contains("dev"))
             {
-                Log.Write("Extracting CZ.xml", Log.Verbosity.Info);
-                File.WriteAllBytes("CZ.xml", Properties.Resources.CZ);
+                Log.Write("Downloading CZ.xml", Log.Verbosity.Info);
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/CZ.xml", "CZ.xml");
+                wc.Dispose();
+            }
+
+            if(!File.Exists("itemy.xml"))
+            {
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/itemy.xml", "itemy.xml");
+                wc.Dispose();
+            }
+
+            if (!File.Exists("items.png"))
+            {
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/items.png", "items.png");
+                wc.Dispose();
+            }
+
+            if (!File.Exists("terrain.png"))
+            {
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/terrain.png", "terrain.png");
+                wc.Dispose();
+            }
+
+            if (!File.Exists("ArmorSlotPics.png"))
+            {
+                WebClient wc = new WebClient();
+                wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/ArmorSlotPics.png", "ArmorSlotPics.png");
+                wc.Dispose();
             }
 
             if (args.Length > 0 && args[0] == "-update")
