@@ -282,6 +282,9 @@
     <None Include="Resources\arr.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="terrain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\compound.png" />
     <None Include="Resources\string.png" />
     <None Include="Resources\longArray.png" />
@@ -298,14 +301,17 @@
     <None Include="Resources\edit.png" />
     <None Include="Resources\unknown.png" />
     <None Include="bin\Debug\Rozsirujici.dll" />
-    <Content Include="bin\Debug\CZ.xml" />
-    <Content Include="bin\Debug\items.png" />
-    <Content Include="bin\Debug\itemy.xml" />
-    <Content Include="bin\Debug\terrain.png" />
     <Content Include="CZ.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="bin\Debug\fNbt.dll" />
+    <Content Include="items.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="itemy.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Protect_Items_Prayer.ico" />
     <None Include="Resources\Rozsirujici.dll" />
   </ItemGroup>
