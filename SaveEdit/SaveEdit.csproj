@@ -315,6 +315,7 @@
     <Content Include="bin\Release\SaveEdit.exe" />
     <Content Include="bin\Release\SaveEdit.pdb" />
     <Content Include="bin\Release\terrain.png" />
+    <Content Include="bin\Release\verze.xml" />
     <Content Include="CZ.xml">
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
