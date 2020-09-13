@@ -298,6 +298,10 @@
     <None Include="Resources\edit.png" />
     <None Include="Resources\unknown.png" />
     <None Include="bin\Debug\Rozsirujici.dll" />
+    <Content Include="bin\Debug\CZ.xml" />
+    <Content Include="bin\Debug\items.png" />
+    <Content Include="bin\Debug\itemy.xml" />
+    <Content Include="bin\Debug\terrain.png" />
     <Content Include="CZ.xml">
       <SubType>Designer</SubType>
     </Content>
