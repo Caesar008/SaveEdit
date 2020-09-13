@@ -304,6 +304,7 @@
     <Content Include="bin\Debug\items.png" />
     <Content Include="bin\Debug\itemy.xml" />
     <Content Include="bin\Debug\terrain.png" />
+    <Content Include="bin\Release\ArmorSlotPics.png" />
     <Content Include="bin\Release\CZ.xml" />
     <Content Include="bin\Release\fNbt.dll" />
     <Content Include="bin\Release\fNbt.xml" />
