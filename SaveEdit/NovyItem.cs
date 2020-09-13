@@ -254,6 +254,8 @@ namespace SaveEdit
                     y.Text = ((Tag)(((ListView)sender).SelectedItems[0].Tag)).Item.ImageInfo.Split(';')[2];
                     preview.Image = Rozsirujici.Grafika.Obrazek.ResizeBMP(((Tag)(((ListView)sender).SelectedItems[0].Tag)).Item.Image, 64, 64, Rozsirujici.Grafika.Obrazek.PomerStran.Originální, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
                     changeColor.Checked = ((Tag)(((ListView)sender).SelectedItems[0].Tag)).Item.ZmenaBarev;
+                    bannerBox.Checked = ((Tag)(((ListView)sender).SelectedItems[0].Tag)).Item.Banner;
+                    fireworkBox.Checked = ((Tag)(((ListView)sender).SelectedItems[0].Tag)).Item.Firework;
                     for (int i = 0; i < kategorie.Items.Count; i++)
                     {
                         kategorie.Items[i].Checked = false;
@@ -883,7 +885,7 @@ namespace SaveEdit
 
                 ((Tag)(seznamBlocku.SelectedItems[0].Tag)).Item.ChangeItemEditor(jmeno.Text, id.Text, maxDamage, 
                     (byte)numericUpDown1.Value, soubor.SelectedItem.ToString().Replace(".\\", "") + ";" + x.Text + ";" + y.Text, cat, povSloty, 
-                    changeColor.Checked, nbtTag, mandatory, vlastnostiItemu, imagePrev, multiVerzeList);
+                    changeColor.Checked, bannerBox.Checked, fireworkBox.Checked, nbtTag, mandatory, vlastnostiItemu, imagePrev, multiVerzeList);
             }
         }
 
@@ -1022,7 +1024,7 @@ namespace SaveEdit
 
             ((Tag)(seznamBlocku.Items[seznamBlocku.Items.Count-1].Tag)).Item.ChangeItemEditor(jmeno.Text, id.Text, maxDamage,
                 (byte)numericUpDown1.Value, soubor.SelectedItem.ToString().Replace(".\\", "") + ";" + x.Text + ";" + y.Text, cat, povSloty,
-                changeColor.Checked, nbtTag, mandatory, vlastnostiItemu, imagePrev, multiVerzeList);
+                changeColor.Checked, bannerBox.Checked, fireworkBox.Checked, nbtTag, mandatory, vlastnostiItemu, imagePrev, multiVerzeList);
             muze = false;
             seznamBlocku.Items[seznamBlocku.Items.Count - 1].Focused = true;
             seznamBlocku.Items[seznamBlocku.Items.Count - 1].Selected = true;

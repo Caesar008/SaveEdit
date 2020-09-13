@@ -135,7 +135,7 @@ namespace SaveEdit
         }
 
 
-        public void ChangeItemEditor(string name, string id, int maxDamage, byte stack, string imageInfo, string[] kategorie, byte[] povoleneSloty, bool canChangeColor, NbtCompound tag, List<string> mandatory, bool vlastnosti, Bitmap image, List<VerzeID> verzeID)
+        public void ChangeItemEditor(string name, string id, int maxDamage, byte stack, string imageInfo, string[] kategorie, byte[] povoleneSloty, bool canChangeColor, bool banner, bool firework, NbtCompound tag, List<string> mandatory, bool vlastnosti, Bitmap image, List<VerzeID> verzeID)
         {
             Name = name;
             ID = id;
@@ -145,6 +145,8 @@ namespace SaveEdit
             Kategorie = kategorie;
             PovoleneSloty = povoleneSloty;
             ZmenaBarev = canChangeColor;
+            Banner = banner;
+            Firework = firework;
             Tag = tag;
             Mandatory = mandatory;
             Vlastnosti = vlastnosti;
