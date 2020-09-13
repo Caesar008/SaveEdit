@@ -411,6 +411,7 @@ namespace SaveEdit
 
             nacteno = true;
             i0.Focus();
+            i0.Select();
 
             poNacteni.Dispose();
 
