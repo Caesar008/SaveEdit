@@ -282,9 +282,6 @@
     <None Include="Resources\arr.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="terrain.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\compound.png" />
     <None Include="Resources\string.png" />
     <None Include="Resources\longArray.png" />
@@ -306,12 +303,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="bin\Debug\fNbt.dll" />
-    <Content Include="items.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="itemy.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Protect_Items_Prayer.ico" />
     <None Include="Resources\Rozsirujici.dll" />
   </ItemGroup>
