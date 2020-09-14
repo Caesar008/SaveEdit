@@ -8,5 +8,14 @@
     <Setting Name="cesta" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="fNbtString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.6.4.0</Value>
+    </Setting>
+    <Setting Name="fNbt" Type="System.UInt64" Scope="User">
+      <Value Profile="(Default)">60400</Value>
+    </Setting>
+    <Setting Name="rozsirujici" Type="System.UInt64" Scope="User">
+      <Value Profile="(Default)">1000000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

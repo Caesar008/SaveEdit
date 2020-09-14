@@ -25,12 +25,12 @@ namespace SaveEdit
 
             FileVersionInfo fi = FileVersionInfo.GetVersionInfo("fNbt.dll");
 
-            if (Properties.Settings.Default.Lang == "" && fi.ProductVersion != "0.6.4.0")
+            if (Properties.Settings.Default.Lang == "" && fi.ProductVersion != Properties.Settings.Default.fNbtString)
             {
                 //kvůli updatu z předchozích verzí
                 File.WriteAllBytes("DllUpdater.exe", Properties.Resources.DllUpdater);
                 Log.Write("Removing old fNbt.dll", Log.Verbosity.Info);
-                Process.Start("DllUpdater.exe");
+                Process.Start("DllUpdater.exe", "firstRun");
                 Application.Exit();
             }
 
@@ -56,7 +56,7 @@ namespace SaveEdit
                 wc.Dispose();
             }
 
-            if(!File.Exists("itemy.xml"))
+            if (!File.Exists("itemy.xml"))
             {
                 WebClient wc = new WebClient();
                 wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/itemy.xml", "itemy.xml");
@@ -84,51 +84,44 @@ namespace SaveEdit
                 wc.Dispose();
             }
 
-            if (args.Length > 0 && args[0] == "-update")
+            if (!Rozsirujici.Program.JednaInstance.BeziGlobalne(TimeSpan.FromSeconds(5), "Caesaruv SaveEdit"))
             {
-                //updatování sebe sama
-                Log.Write("Updating SaveEdit using parameter -update", Log.Verbosity.Info);
+                try
+                {
+                    Log.Write("Starting Application Window", Log.Verbosity.Info);
+                    Application.Run(new Form1());
+                }
+                catch (Exception e)
+                {
+                    if (Application.ProductVersion.EndsWith("dev"))
+                    {
+                        Log.Write("Developer version crashed.", Log.Verbosity.Critical);
+                        MessageBox.Show(e.Message + "\r\n\r\n" + e.StackTrace);
+                    }
+                    else
+                    {
+                        Log.Write("SaveEdit crashed. Creating report file on Desktop", Log.Verbosity.Critical);
+                        fNbt.NbtFile reportFile = new fNbt.NbtFile(new fNbt.NbtCompound("report"));
+                        reportFile.RootTag.Add(new fNbt.NbtString("StackTrace", e.Message + "\r\n\r\n" + e.StackTrace));
+                        string logFile = "";
+                        if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\SaveEditLog.log"))
+                            logFile = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\SaveEditLog.log");
+                        reportFile.RootTag.Add(new fNbt.NbtString("LogFile", logFile));
+                        if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile"))
+                        {
+                            reportFile.RootTag.Add(new fNbt.NbtByteArray("SaveFile", File.ReadAllBytes(File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile"))));
+                        }
+                        reportFile.SaveToFile(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\SaveEdit_crash.report", fNbt.NbtCompression.GZip);
+                        MessageBox.Show(new Rozsirujici.Jazyk.Jazyk("CZ.xml").ReturnPreklad("Messages/ErrorCrash"), "SaveEdit", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
-                if (!Rozsirujici.Program.JednaInstance.BeziGlobalne(TimeSpan.FromSeconds(5), "Caesaruv SaveEdit"))
-                {
-                    try
-                    {
-                        Log.Write("Starting Application Window", Log.Verbosity.Info);
-                        Application.Run(new Form1());
-                    }
-                    catch (Exception e)
-                    {
-                        if (Application.ProductVersion.EndsWith("dev"))
-                        {
-                            Log.Write("Developer version crashed.", Log.Verbosity.Critical);
-                            MessageBox.Show(e.Message + "\r\n\r\n" + e.StackTrace);
-                        }
-                        else
-                        {
-                            Log.Write("SaveEdit crashed. Creating report file on Desktop", Log.Verbosity.Critical);
-                            fNbt.NbtFile reportFile = new fNbt.NbtFile(new fNbt.NbtCompound("report"));
-                            reportFile.RootTag.Add(new fNbt.NbtString("StackTrace", e.Message + "\r\n\r\n" + e.StackTrace));
-                            string logFile = "";
-                            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\SaveEditLog.log"))
-                                logFile = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\SaveEditLog.log");
-                            reportFile.RootTag.Add(new fNbt.NbtString("LogFile", logFile));
-                            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile"))
-                            {
-                                reportFile.RootTag.Add(new fNbt.NbtByteArray("SaveFile", File.ReadAllBytes(File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile"))));
-                            }
-                            reportFile.SaveToFile(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\SaveEdit_crash.report", fNbt.NbtCompression.GZip);
-                            MessageBox.Show(new Rozsirujici.Jazyk.Jazyk("CZ.xml").ReturnPreklad("Messages/ErrorCrash"), "SaveEdit", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                else
-                {
-                    Log.Write("SaveEdit is already running", Log.Verbosity.Warning);
-                    MessageBox.Show(new Rozsirujici.Jazyk.Jazyk("CZ.xml").ReturnPreklad("Messages/AlreadyRunning"));
-                }
+                Log.Write("SaveEdit is already running", Log.Verbosity.Warning);
+                MessageBox.Show(new Rozsirujici.Jazyk.Jazyk("CZ.xml").ReturnPreklad("Messages/AlreadyRunning"));
             }
+
         }
     }
 }

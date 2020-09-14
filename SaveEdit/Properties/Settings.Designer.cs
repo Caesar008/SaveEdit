@@ -12,7 +12,7 @@ namespace SaveEdit.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -44,6 +44,42 @@ namespace SaveEdit.Properties {
             }
             set {
                 this["cesta"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.6.4.0")]
+        public string fNbtString {
+            get {
+                return ((string)(this["fNbtString"]));
+            }
+            set {
+                this["fNbtString"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60400")]
+        public ulong fNbt {
+            get {
+                return ((ulong)(this["fNbt"]));
+            }
+            set {
+                this["fNbt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000000")]
+        public ulong rozsirujici {
+            get {
+                return ((ulong)(this["rozsirujici"]));
+            }
+            set {
+                this["rozsirujici"] = value;
             }
         }
     }
