@@ -1150,7 +1150,7 @@ namespace SaveEdit
             {
                 Item item = (Item)e.Data.GetData(typeof(Item));
                 Log.Write("Moving item " + item.ID + " from slot " + item.Slot + " over slot " + ((Tag)((Button)sender).Tag).Slot, Log.Verbosity.Info);
-                if (((Item)e.Data.GetData(typeof(Item))).PovoleneSloty == null && ((Tag)((Button)sender).Tag).Slot < 100)
+                if (((Item)e.Data.GetData(typeof(Item))).PovoleneSloty == null && (((Tag)((Button)sender).Tag).Slot < 100 || ((Tag)((Button)sender).Tag).Slot == 150))
                     e.Effect = DragDropEffects.Move;
                 else if (((Item)e.Data.GetData(typeof(Item))).PovoleneSloty.Contains(((Tag)((Button)sender).Tag).Slot) && 
                     ((Tag)((Button)sender).Tag).Slot >= 100 || ((Tag)((Button)sender).Tag).Slot < 100)

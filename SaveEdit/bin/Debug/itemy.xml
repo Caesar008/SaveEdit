@@ -2,14 +2,14 @@
 <Itemy>
   <Verze>50000</Verze>
   <Minecraft mc="2570" min="1499">Minecraft Java edition 1.16.2</Minecraft>
-  <Itemy total="907">
+  <Itemy total="1012">
     <Item>
       <ID>minecraft:stone</ID>
       <Name>Stone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>1</Y>
+        <X>24</X>
+        <Y>78</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -19,8 +19,8 @@
       <Name>Granite</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>19</Y>
+        <X>12</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -30,8 +30,8 @@
       <Name>Polished Granite</Name>
       <Stack>64</Stack>
       <Image>
-        <X>6</X>
-        <Y>20</Y>
+        <X>22</X>
+        <Y>57</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -42,7 +42,7 @@
       <Stack>64</Stack>
       <Image>
         <X>7</X>
-        <Y>20</Y>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -52,8 +52,8 @@
       <Name>Polished Diorite</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>20</Y>
+        <X>21</X>
+        <Y>57</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -63,8 +63,8 @@
       <Name>Andesite</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>20</Y>
+        <X>14</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -74,8 +74,8 @@
       <Name>Polished Andesite</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>20</Y>
+        <X>20</X>
+        <Y>57</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -85,8 +85,8 @@
       <Name>Grass Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>1</Y>
+        <X>13</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -137,66 +137,66 @@
     </Item>
     <Item>
       <ID>minecraft:oak_planks</ID>
-      <Name>Oak Wood Planks</Name>
+      <Name>Oak Planks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>5</X>
-        <Y>1</Y>
+        <X>15</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:spruce_planks</ID>
-      <Name>Spruce Wood Planks</Name>
+      <Name>Spruce Planks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>7</X>
-        <Y>13</Y>
+        <X>16</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:birch_planks</ID>
-      <Name>Birch Wood Planks</Name>
+      <Name>Birch Planks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>7</X>
-        <Y>14</Y>
+        <X>15</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:jungle_planks</ID>
-      <Name>Jungle Wood Planks</Name>
+      <Name>Jungle Planks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>13</Y>
+        <X>14</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:acacia_planks</ID>
-      <Name>Acacia Wood Planks</Name>
+      <Name>Acacia Planks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>18</Y>
+        <X>12</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:dark_oak_planks</ID>
-      <Name>Dark Oak Wood Planks</Name>
+      <Name>Dark Oak Planks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>18</Y>
+        <X>13</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -305,8 +305,8 @@
       <Name>Gravel</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>2</Y>
+        <X>14</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1070,15 +1070,15 @@
         <Y>3</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
+      <Kategorie>redstone</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:sandstone</ID>
       <Name>Sandstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>13</Y>
+        <X>8</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1088,8 +1088,8 @@
       <Name>Chiseled Sandstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>6</X>
-        <Y>15</Y>
+        <X>1</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1099,8 +1099,8 @@
       <Name>Cut Sandstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>12</Y>
+        <X>6</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1110,8 +1110,8 @@
       <Name>Red Sandstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>21</Y>
+        <X>4</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1121,8 +1121,8 @@
       <Name>Chiseled Red Sandstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>21</Y>
+        <X>24</X>
+        <Y>52</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1132,8 +1132,8 @@
       <Name>Cut Red Sandstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>11</X>
-        <Y>21</Y>
+        <X>5</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1624,66 +1624,66 @@
     </Item>
     <Item>
       <ID>minecraft:oak_slab</ID>
-      <Name>Oak Wood Slab</Name>
+      <Name>Oak Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>18</X>
-        <Y>2</Y>
+        <X>4</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:spruce_slab</ID>
-      <Name>Oak Wood Slab</Name>
+      <Name>Spruce Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>20</Y>
+        <X>12</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:birch_slab</ID>
-      <Name>Birch Wood Slab</Name>
+      <Name>Birch Slab</Name>
       <Stack>64</Stack>
       <Image>
         <X>20</X>
-        <Y>20</Y>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:jungle_slab</ID>
-      <Name>Jungle Wood Slab</Name>
+      <Name>Jungle Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>21</X>
-        <Y>20</Y>
+        <X>2</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:acacia_slab</ID>
-      <Name>Acacia Wood Slab</Name>
+      <Name>Acacia Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>22</X>
-        <Y>20</Y>
+        <X>16</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:dark_oak_slab</ID>
-      <Name>Dark Oak Wood Slab</Name>
+      <Name>Dark Oak Slab</Name>
       <Stack>64</Stack>
       <Image>
         <X>23</X>
-        <Y>20</Y>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1693,8 +1693,8 @@
       <Name>Stone Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>2</Y>
+        <X>12</X>
+        <Y>48</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1704,8 +1704,8 @@
       <Name>Sandstone Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>18</X>
-        <Y>1</Y>
+        <X>10</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1715,8 +1715,8 @@
       <Name>Red Sandstone Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>13</X>
-        <Y>21</Y>
+        <X>9</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1726,8 +1726,8 @@
       <Name>Cobblestone Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>1</Y>
+        <X>22</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1737,8 +1737,8 @@
       <Name>Brick Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>17</X>
-        <Y>1</Y>
+        <X>21</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1748,8 +1748,8 @@
       <Name>Stone Brick Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>17</X>
-        <Y>2</Y>
+        <X>13</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1759,8 +1759,8 @@
       <Name>Nether Brick Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
-        <Y>2</Y>
+        <X>3</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1770,8 +1770,8 @@
       <Name>Quartz Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>18</X>
-        <Y>13</Y>
+        <X>8</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1781,8 +1781,8 @@
       <Name>Purpur Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>13</Y>
+        <X>7</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1792,8 +1792,8 @@
       <Name>Prismarine Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>35</Y>
+        <X>6</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1803,8 +1803,8 @@
       <Name>Prismarine Brick Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>15</X>
-        <Y>35</Y>
+        <X>5</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1814,8 +1814,8 @@
       <Name>Dark Prismarine Slab</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>35</Y>
+        <X>24</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1825,8 +1825,8 @@
       <Name>Bricks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>1</Y>
+        <X>19</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1899,66 +1899,66 @@
     </Item>
     <Item>
       <ID>minecraft:oak_stairs</ID>
-      <Name>Oak Wood Stairs</Name>
+      <Name>Oak Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>22</Y>
+        <X>9</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:spruce_stairs</ID>
-      <Name>Spruce Wood Stairs</Name>
+      <Name>Spruce Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>11</X>
-        <Y>22</Y>
+        <X>23</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:birch_stairs</ID>
-      <Name>Birch Wood Stairs</Name>
+      <Name>Birch Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>22</Y>
+        <X>19</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:jungle_stairs</ID>
-      <Name>Jungle Wood Stairs</Name>
+      <Name>Jungle Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>13</X>
-        <Y>22</Y>
+        <X>5</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:acacia_stairs</ID>
-      <Name>Acacia Wood Stairs</Name>
+      <Name>Acacia Stairs</Name>
       <Stack>64</Stack>
       <Image>
         <X>14</X>
-        <Y>22</Y>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:dark_oak_stairs</ID>
-      <Name>Dark Oak Wood Stairs</Name>
+      <Name>Dark Oak Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>15</X>
-        <Y>22</Y>
+        <X>24</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1968,8 +1968,8 @@
       <Name>Sandstone Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>21</X>
-        <Y>18</Y>
+        <X>19</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1979,8 +1979,8 @@
       <Name>Red Sandstone Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>21</Y>
+        <X>18</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1990,8 +1990,8 @@
       <Name>Cobblestone Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>22</X>
-        <Y>18</Y>
+        <X>21</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2001,8 +2001,8 @@
       <Name>Brick Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
-        <Y>18</Y>
+        <X>20</X>
+        <Y>62</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2012,8 +2012,8 @@
       <Name>Stone Brick Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>23</X>
-        <Y>18</Y>
+        <X>24</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2023,8 +2023,8 @@
       <Name>Nether Brick Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>19</Y>
+        <X>8</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2034,8 +2034,8 @@
       <Name>Quartz Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>13</Y>
+        <X>20</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2046,7 +2046,7 @@
       <Stack>64</Stack>
       <Image>
         <X>15</X>
-        <Y>13</Y>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2056,8 +2056,8 @@
       <Name>Prismarine Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>35</Y>
+        <X>14</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2067,8 +2067,8 @@
       <Name>Prismarine Brick Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>11</X>
-        <Y>35</Y>
+        <X>13</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2078,8 +2078,8 @@
       <Name>Dark Prismarine Stairs</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>35</Y>
+        <X>1</X>
+        <Y>63</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2159,7 +2159,7 @@
         <Y>3</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
+      <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:ladder</ID>
@@ -3121,7 +3121,7 @@
     </Item>
     <Item>
       <ID>minecraft:chipped_anvil</ID>
-      <Name>Slightly Damaged Anvil</Name>
+      <Name>Chipped Anvil</Name>
       <Stack>64</Stack>
       <Image>
         <X>19</X>
@@ -3132,7 +3132,7 @@
     </Item>
     <Item>
       <ID>minecraft:damaged_anvil</ID>
-      <Name>Very Damaged Anvil</Name>
+      <Name>Damaged Anvil</Name>
       <Stack>64</Stack>
       <Image>
         <X>19</X>
@@ -3498,8 +3498,8 @@
       <Name>White Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>5</Y>
+        <X>5</X>
+        <Y>47</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3509,8 +3509,8 @@
       <Name>Orange Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>14</Y>
+        <X>2</X>
+        <Y>47</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3520,8 +3520,8 @@
       <Name>Magenta Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>13</Y>
+        <X>1</X>
+        <Y>47</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3531,8 +3531,8 @@
       <Name>Light Blue Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>12</Y>
+        <X>11</X>
+        <Y>23</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3542,8 +3542,8 @@
       <Name>Yellow Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>11</Y>
+        <X>6</X>
+        <Y>47</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3553,8 +3553,8 @@
       <Name>Lime Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>10</Y>
+        <X>24</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3565,7 +3565,7 @@
       <Stack>64</Stack>
       <Image>
         <X>3</X>
-        <Y>9</Y>
+        <Y>47</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3575,8 +3575,8 @@
       <Name>Gray Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>8</Y>
+        <X>21</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3586,8 +3586,8 @@
       <Name>Light Gray Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>15</Y>
+        <X>23</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3597,8 +3597,8 @@
       <Name>Cyan Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>14</Y>
+        <X>20</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3609,7 +3609,7 @@
       <Stack>64</Stack>
       <Image>
         <X>2</X>
-        <Y>13</Y>
+        <Y>49</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3619,8 +3619,8 @@
       <Name>Blue Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>12</Y>
+        <X>18</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3630,8 +3630,8 @@
       <Name>Brown Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>11</Y>
+        <X>19</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3641,8 +3641,8 @@
       <Name>Green Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>10</Y>
+        <X>22</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3652,8 +3652,8 @@
       <Name>Red Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>9</Y>
+        <X>4</X>
+        <Y>47</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3663,8 +3663,8 @@
       <Name>Black Carpet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>8</Y>
+        <X>17</X>
+        <Y>46</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -10661,17 +10661,6 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:acacia_door</ID>
-      <Name>Acacia Door</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>2</X>
-        <Y>14</Y>
-        <File>items.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
       <ID>minecraft:stripped_oak_bark</ID>
       <MultipleID>
         <ID maxVerze="1511">minecraft:stripped_oak_bark</ID>
@@ -10867,6 +10856,1172 @@
       <Image>
         <X>12</X>
         <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:bamboo</ID>
+      <Name>Bamboo</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>24</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>materialy</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:barrel</ID>
+      <Name>Barrel</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>4</X>
+        <Y>43</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:basalt</ID>
+      <Name>Basalt</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>88</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_basalt</ID>
+      <Name>Polished Basalt</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>13</X>
+        <Y>91</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:beehive</ID>
+      <Name>Beehive</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>80</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;ruzne</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:bee_nest</ID>
+      <Name>Bee Nest</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>80</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;ruzne</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:bell</ID>
+      <Name>Bell</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>51</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;ruzne</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:birch_door</ID>
+      <Name>Birch Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>14</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:iron_door</ID>
+      <Name>Iron Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>13</X>
+        <Y>3</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:oak_door</ID>
+      <Name>Oak Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>12</X>
+        <Y>3</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:spruce_door</ID>
+      <Name>Spruce Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>14</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:jungle_door</ID>
+      <Name>Jungle Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>5</X>
+        <Y>14</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:acacia_door</ID>
+      <Name>Acacia Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>14</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:dark_oak_door</ID>
+      <Name>Dark Oak Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>4</X>
+        <Y>14</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:crismon_door</ID>
+      <Name>Crismon Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>52</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:warped_door</ID>
+      <Name>Warped Door</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>53</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:white_banner</ID>
+      <Name>White Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>7</X>
+        <Y>21</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:orange_banner</ID>
+      <Name>Orange Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>7</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:magenta_banner</ID>
+      <Name>Magenta Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>6</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:light_blue_banner</ID>
+      <Name>Light Blue Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>3</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:yellow_banner</ID>
+      <Name>Yellow Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>11</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:lime_banner</ID>
+      <Name>Lime Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>5</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:pink_banner</ID>
+      <Name>Pink Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>8</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:gray_banner</ID>
+      <Name>Gray Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>1</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:light_gray_banner</ID>
+      <Name>Light Gray Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>4</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:cyan_banner</ID>
+      <Name>Cyan Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>24</X>
+        <Y>45</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:purple_banner</ID>
+      <Name>Purple Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>9</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:blue_banner</ID>
+      <Name>Blue Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>22</X>
+        <Y>45</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:brown_banner</ID>
+      <Name>Brown Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>23</X>
+        <Y>45</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:green_banner</ID>
+      <Name>Green Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>2</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:red_banner</ID>
+      <Name>Red Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>10</X>
+        <Y>46</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:black_banner</ID>
+      <Name>Black Banner</Name>
+      <Stack>16</Stack>
+      <Image>
+        <X>21</X>
+        <Y>45</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:white_bed</ID>
+      <Name>White Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>12</X>
+        <Y>70</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:orange_bed</ID>
+      <Name>Orange Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>8</X>
+        <Y>69</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:magenta_bed</ID>
+      <Name>Magenta Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>1</X>
+        <Y>69</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:light_blue_bed</ID>
+      <Name>Light Blue Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>4</X>
+        <Y>68</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:yellow_bed</ID>
+      <Name>Yellow Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>19</X>
+        <Y>70</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:lime_bed</ID>
+      <Name>Lime Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>18</X>
+        <Y>68</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:pink_bed</ID>
+      <Name>Pink Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>15</X>
+        <Y>69</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:gray_bed</ID>
+      <Name>Gray Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>14</X>
+        <Y>67</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:light_gray_bed</ID>
+      <Name>Light Gray Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>11</X>
+        <Y>68</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:cyan_bed</ID>
+      <Name>Cyan Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>7</X>
+        <Y>67</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:purple_bed</ID>
+      <Name>Purple Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>22</X>
+        <Y>69</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:blue_bed</ID>
+      <Name>Blue Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>17</X>
+        <Y>66</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:brown_bed</ID>
+      <Name>Brown Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>24</X>
+        <Y>66</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:green_bed</ID>
+      <Name>Green Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>21</X>
+        <Y>67</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:red_bed</ID>
+      <Name>Red Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>5</X>
+        <Y>70</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item banner="1">
+      <ID>minecraft:black_bed</ID>
+      <Name>Black Bed</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>10</X>
+        <Y>66</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:blackstone</ID>
+      <Name>Blackstone</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:blackstone_slab</ID>
+      <Name>Blackstone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>93</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:petrified_oak_slab</ID>
+      <Name>Petrified Oak Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>4</X>
+        <Y>62</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:ppolished_blackstone_slab</ID>
+      <Name>Polished Blackstone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>93</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:ppolished_blackstone_brick_slab</ID>
+      <Name>Polished Blackstone Brick Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>93</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:crismon_slab</ID>
+      <Name>Crismon Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>89</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:warped_slab</ID>
+      <Name>Warped Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>89</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_stone_slab</ID>
+      <Name>Smooth Stone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>62</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:granite_slab</ID>
+      <Name>Granite Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_granite_slab</ID>
+      <Name>Polished Granite Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>8</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:diorite_slab</ID>
+      <Name>Diorite Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_diorite_slab</ID>
+      <Name>Polished Diorite Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:andesite_slab</ID>
+      <Name>Andesite Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_andesite_slab</ID>
+      <Name>Polished Andesite Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:mossy_cobblestone_slab</ID>
+      <Name>Mossy Cobblestone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>4</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:mossy_stone_brick_slab</ID>
+      <Name>Mossy Stone Brick Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>5</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:end_stone_brick_slab</ID>
+      <Name>End Stone Brick Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:red_nether_brick_slab</ID>
+      <Name>Red Nether Brick Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:cut_sandstone_slab</ID>
+      <Name>Cut Sandstone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>8</X>
+        <Y>49</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_sandstone_slab</ID>
+      <Name>Smooth Sandstone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:cut_red_sandstone_slab</ID>
+      <Name>Cut Red Sandstone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>49</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_red_sandstone_slab</ID>
+      <Name>Smooth Red Sandstone Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>10</X>
+        <Y>48</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_quartz_slab</ID>
+      <Name>Smooth Quartz Slab</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>17</X>
+        <Y>52</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:crismon_stairs</ID>
+      <Name>Crismon Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>90</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:warped_stairs</ID>
+      <Name>Warped Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>4</X>
+        <Y>90</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:stone_stairs</ID>
+      <Name>Stone Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>64</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:granite_stairs</ID>
+      <Name>Granite Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>4</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_granite_stairs</ID>
+      <Name>Polished Granite Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>12</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:diorite_stairs</ID>
+      <Name>Diorite Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_diorite_stairs</ID>
+      <Name>Polished Diorite Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:andesite_stairs</ID>
+      <Name>Andesite Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>18</X>
+        <Y>62</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_andesite_stairs</ID>
+      <Name>Polished Andesite Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>10</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:mossy_cobblestone_stairs</ID>
+      <Name>Mossy Cobblestone Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:mossy_stone_brick_stairs</ID>
+      <Name>Mossy Stone Brick Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:end_stone_brick_stairs</ID>
+      <Name>End Stone Brick Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:red_nether_brick_stairs</ID>
+      <Name>Red Nether Brick Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>17</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_sandstone_stairs</ID>
+      <Name>Smooth Sandstone Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>22</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_red_sandstone_stairs</ID>
+      <Name>Smooth Red Sandstone Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:smooth_quartz_stairs</ID>
+      <Name>Smooth Quartz Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>63</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:blackstone_stairs</ID>
+      <Name>Blackstone Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_blackstone_stairs</ID>
+      <Name>Polished Blackstone Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>22</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_blackstone_brick_stairs</ID>
+      <Name>Polished Blackstone Brick Stairs</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>23</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:stone_brick_wall</ID>
+      <Name>Stone Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>23</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:mossy_stone_brick_wall</ID>
+      <Name>Mossy Stone Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>17</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:diorite_wall</ID>
+      <Name>Diorite Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:granite_wall</ID>
+      <Name>Granite Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:sandstone_wall</ID>
+      <Name>Sandstone Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>22</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:red_sandstone_wall</ID>
+      <Name>Red Sandstone Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:brick_wall</ID>
+      <Name>Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>13</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:prismarine_wall</ID>
+      <Name>Prismarine Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:nether_brick_wall</ID>
+      <Name>Nether Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>18</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:red_nether_brick_wall</ID>
+      <Name>Red Nether Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:end_stone_brick_wall</ID>
+      <Name>End Stone Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>47</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:blackstone_wall</ID>
+      <Name>Blackstone Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_blackstone_wall</ID>
+      <Name>Polished Blackstone Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>18</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:polished_blackstone_brick_wall</ID>
+      <Name>Polished Blackstone Brick Wall</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>17</X>
+        <Y>92</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:blast_furnace</ID>
+      <Name>Blast Furnace</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>43</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:blue_ice</ID>
+      <Name>Blue Ice</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>34</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
