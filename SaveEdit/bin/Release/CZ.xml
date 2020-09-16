@@ -5,6 +5,7 @@
     <NotInstalled en="Minecraft probably is not installed or no world has been created!">Minecraft pravděpodobně není nainstalován, nebo nebyl vytvořen žádný save!</NotInstalled>
     <LoadingSave en="Loading save. Please, wait.">Načítám save. Prosím čekej.</LoadingSave>
     <LoadingSaveEdit en="Loading SaveEdit. Please, wait.">Načítám SaveEdit. Prosím čekej.</LoadingSaveEdit>
+    <LoadingItems en="Loading items {0} of {1}">Načítám item {0} z {1}</LoadingItems>
     <WannaSave en="Do you want to save changes?">"Chcete uložit změny?"</WannaSave>
     <NotSupported en="Save from unsupported Minecraft version. Can't open it.">Save z nepodporované verze Minecraftu. Nelze otevřít.</NotSupported>
     <ErrorCrash en="Application SaveEdit experienced unexpected error and crashed due to it. On your Desktop was created file 'SaveEdit_crash.report'. Please send this file with your description of what actions you were doing during and shortly before crash occured to SaveEdit@gmail.com. Thank you">V programu SaveEdit došlo k neočekávané chybě, kvůli které program spadnul. Na Ploše byl vytvořen soubor 'SaveEdit_crash.report'. Prosím, zašli tento soubor spolu s Vaším popisem toho, co jste v programu prováděli během pádu a chvilku před pádem programu na adresu SaveEdit@gmail.com. Děkuji.</ErrorCrash>
