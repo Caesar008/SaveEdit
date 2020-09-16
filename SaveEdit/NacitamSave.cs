@@ -26,8 +26,9 @@ namespace SaveEdit
                 nacitamSaveLbl.Text = form.jazyk.ReturnPreklad("Messages/LoadingSaveEdit", form.en);
         }
 
-        public void ReportProgress(int progress)
+        public void ReportProgress(int progress, int item, int celkem)
         {
+            label1.Text = form.jazyk.ReturnPreklad("Messages/LoadingItems", form.en).Replace("{0}", item.ToString()).Replace("{1}", celkem.ToString()) ;
             if (progressBar1.Style == ProgressBarStyle.Marquee)
                 progressBar1.Style = ProgressBarStyle.Blocks;
             if (progress != 100)

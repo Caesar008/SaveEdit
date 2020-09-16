@@ -49,12 +49,12 @@ namespace SaveEdit
 
         public Form1()
         {
-            Log.Reset();
             Log.Write("Starting SaveEdit", Log.Verbosity.Info);
             Log.Write("Initializing components", Log.Verbosity.Info);
 
             InitializeComponent();
 
+            Log.Write("Opening loading screen", Log.Verbosity.Info);
             nsStart = new NacitamSave(this, true);
             nsStart.StartPosition = FormStartPosition.Manual;
             nsStart.Location = new Point(this.Location.X + (this.Width / 2) - (nsStart.Width / 2), this.Location.Y + (this.Height / 2) - (nsStart.Height / 2));
@@ -816,16 +816,16 @@ namespace SaveEdit
                     if (nsStart != null)
                     {
                         if (!InvokeRequired)
-                            nsStart.ReportProgress((int)((float)itemNum / (float)itemTotal * 100));
+                            nsStart.ReportProgress((int)((float)itemNum / (float)itemTotal * 100), itemNum, itemTotal);
                         else
-                            this.Invoke(new Action(() => nsStart.ReportProgress((int)((float)itemNum / (float)itemTotal * 100))));
+                            this.Invoke(new Action(() => nsStart.ReportProgress((int)((float)itemNum / (float)itemTotal * 100), itemNum, itemTotal)));
                     }
                     if (ns != null)
                     {
                         if (!InvokeRequired)
-                            ns.ReportProgress((int)((float)itemNum / (float)itemTotal * 100));
+                            ns.ReportProgress((int)((float)itemNum / (float)itemTotal * 100), itemNum, itemTotal);
                         else
-                            this.Invoke(new Action(() => ns.ReportProgress((int)((float)itemNum / (float)itemTotal * 100))));
+                            this.Invoke(new Action(() => ns.ReportProgress((int)((float)itemNum / (float)itemTotal * 100), itemNum, itemTotal)));
                     }
                 }
 
@@ -1339,6 +1339,11 @@ namespace SaveEdit
         }
 
         private void xplevel_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void Presun(object sender, DragEventArgs e)
         {
             
         }

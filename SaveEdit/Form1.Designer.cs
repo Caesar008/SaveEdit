@@ -1378,11 +1378,6 @@ namespace SaveEdit
 
         }
 
-        private void Presun(object sender, DragEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
 
 
         #endregion

@@ -31,17 +31,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.nacitamSaveLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.nacitamSaveLbl);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 82);
+            this.panel1.Size = new System.Drawing.Size(352, 102);
             this.panel1.TabIndex = 0;
             // 
             // progressBar1
@@ -63,18 +65,27 @@
             this.nacitamSaveLbl.Text = "Načítám save. Prosím čekej.";
             this.nacitamSaveLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(3, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(344, 20);
+            this.label1.TabIndex = 4;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // NacitamSave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 82);
+            this.ClientSize = new System.Drawing.Size(352, 102);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(352, 82);
+            this.MaximumSize = new System.Drawing.Size(352, 102);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(352, 82);
+            this.MinimumSize = new System.Drawing.Size(352, 102);
             this.Name = "NacitamSave";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
@@ -89,5 +100,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label nacitamSaveLbl;
+        private System.Windows.Forms.Label label1;
     }
 }

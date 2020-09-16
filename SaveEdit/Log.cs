@@ -37,10 +37,10 @@ namespace SaveEdit
             while(IsFileLocked(new FileInfo(logPath)))
             {
                 //čekání na odemčení souboru
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(10);
                 wait++;
 
-                if (wait > 300)
+                if (wait > 3000)
                 {
                     break;
                 }

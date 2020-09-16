@@ -18,6 +18,7 @@ namespace SaveEdit
         [STAThread]
         static void Main(string[] args)
         {
+            Log.Reset();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
