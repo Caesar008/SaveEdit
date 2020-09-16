@@ -14,7 +14,7 @@ namespace SaveEdit
         /// Hlavní vstupní bod aplikace.
         /// </summary>
         /// 
-        static bool fnbtDown = false, rozsirDown = false, czDown = false, itemyXmlDown = false, itemyDown = false, terrainDown = false, armorDown = false;
+
         [STAThread]
         static void Main(string[] args)
         {
@@ -36,120 +36,66 @@ namespace SaveEdit
                 Process.Start("DllUpdater.exe", "firstRun");
                 Application.Exit();
             }
-
-            if (!File.Exists("Rozsirujici.dll"))
-            {
-                try
-                {
-                    Log.Write("Downloading Rozsirujici.dll", Log.Verbosity.Info);
-                    WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedfNbt;
-                    wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/Rozsirujici.dll", "Rozsirujici.dll");
-                    wc.Dispose();
-                    fnbtDown = true;
-                }
-                catch { fnbtDown = true; }
-            }
-            else
-                fnbtDown = true;
-            if (!File.Exists("fNbt.dll"))
-            {
-                try
-                {
-                    Log.Write("Downloading fNbt.dll", Log.Verbosity.Info);
-                    WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedRozsirujici;
-                    wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/fNbt.dll", "fNbt.dll");
-                    wc.Dispose();
-                    rozsirDown = true;
-                }
-                catch { rozsirDown = true; }
-            }
-            else
-                rozsirDown = true;
             if (!File.Exists("CZ.xml") || Application.ProductVersion.Contains("dev"))
             {
                 try
                 {
                     Log.Write("Downloading CZ.xml", Log.Verbosity.Info);
                     WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedczXml;
                     wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/CZ.xml", "CZ.xml");
                     wc.Dispose();
-                    czDown = true;
                 }
-                catch { czDown = true; }
+                catch {  }
             }
-            else
-                czDown = true;
-
             if (!File.Exists("itemy.xml"))
             {
                 try
                 {
                     WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedItemyXml;
                     wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/itemy.xml", "itemy.xml");
                     wc.Dispose();
-                    itemyXmlDown = true;
                 }
-                catch { itemyXmlDown = true; }
+                catch { }
             }
-            else
-                itemyXmlDown = true;
 
             if (!File.Exists("items.png"))
             {
                 try
                 {
                     WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedItemy;
                     wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/items.png", "items.png");
                     wc.Dispose();
-                    itemyDown = true;
                 }
-                catch { itemyDown = true; }
+                catch {  }
             }
-            else
-                itemyDown = true;
 
             if (!File.Exists("terrain.png"))
             {
                 try
                 {
                     WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedTerrain;
                     wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/terrain.png", "terrain.png");
                     wc.Dispose();
-                    terrainDown = true;
                 }
-                catch { terrainDown = true; }
+                catch { }
             }
-            else
-                terrainDown = true;
 
             if (!File.Exists("ArmorSlotPics.png"))
             {
                 try
                 {
                     WebClient wc = new WebClient();
-                    wc.DownloadFileCompleted += Wc_DownloadFileCompletedArmor;
                     wc.DownloadFile("https://raw.githubusercontent.com/Caesar008/SaveEdit/master/SaveEdit/bin/Release/ArmorSlotPics.png", "ArmorSlotPics.png");
                     wc.Dispose();
-                    armorDown = true;
                 }
-                catch { armorDown = true; }
+                catch {  }
             }
-            else
-                armorDown = true;
 
             if (!Rozsirujici.Program.JednaInstance.BeziGlobalne(TimeSpan.FromSeconds(5), "Caesaruv SaveEdit"))
             {
                 try
                 {
                     Log.Write("Starting Application Window", Log.Verbosity.Info);
-                    while (!fnbtDown || !rozsirDown || !czDown || !itemyXmlDown || !itemyDown || !terrainDown || !armorDown)
-                        System.Threading.Thread.Sleep(100);
                     Application.Run(new Form1());
                 }
                 catch (Exception e)
@@ -183,41 +129,6 @@ namespace SaveEdit
                 MessageBox.Show(new Rozsirujici.Jazyk.Jazyk("CZ.xml").ReturnPreklad("Messages/AlreadyRunning"));
             }
 
-        }
-
-        private static void Wc_DownloadFileCompletedArmor(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            armorDown = true;
-        }
-
-        private static void Wc_DownloadFileCompletedTerrain(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            terrainDown = true;
-        }
-
-        private static void Wc_DownloadFileCompletedItemy(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            itemyDown = true;
-        }
-
-        private static void Wc_DownloadFileCompletedItemyXml(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            itemyXmlDown = true;
-        }
-
-        private static void Wc_DownloadFileCompletedczXml(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            czDown = true;
-        }
-
-        private static void Wc_DownloadFileCompletedRozsirujici(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            rozsirDown = true;
-        }
-
-        private static void Wc_DownloadFileCompletedfNbt(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
-        {
-            fnbtDown = true;
         }
     }
 }
