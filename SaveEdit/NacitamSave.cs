@@ -28,21 +28,29 @@ namespace SaveEdit
 
         public void ReportProgress(int progress, int item, int celkem)
         {
-            label1.Text = form.jazyk.ReturnPreklad("Messages/LoadingItems", form.en).Replace("{0}", item.ToString()).Replace("{1}", celkem.ToString()) ;
-            if (progressBar1.Style == ProgressBarStyle.Marquee)
-                progressBar1.Style = ProgressBarStyle.Blocks;
-            if (progress != 100)
+            if (progress >= 0)
             {
-                if (progressBar1.Maximum != 101)
-                    progressBar1.Maximum = 101;
-                progressBar1.Value = progress + 1;
+                label1.Text = form.jazyk.ReturnPreklad("Messages/LoadingItems", form.en).Replace("{0}", item.ToString()).Replace("{1}", celkem.ToString());
+                if (progressBar1.Style == ProgressBarStyle.Marquee)
+                    progressBar1.Style = ProgressBarStyle.Blocks;
+                if (progress != 100)
+                {
+                    if (progressBar1.Maximum != 101)
+                        progressBar1.Maximum = 101;
+                    progressBar1.Value = progress + 1;
+                }
+                else
+                {
+                    progressBar1.Value = progress + 1;
+                    progressBar1.Maximum = 100;
+                }
+                progressBar1.Value = progress;
             }
             else
             {
-                progressBar1.Value = progress + 1;
-                progressBar1.Maximum = 100;
+                progressBar1.Style = ProgressBarStyle.Marquee;
+                label1.Text = "";
             }
-            progressBar1.Value = progress;
         }
     }
 }

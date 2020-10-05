@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using fNbt;
 using System.IO;
 using System.Xml;
+using System.Collections;
 
 namespace SaveEdit
 {
@@ -1071,6 +1072,20 @@ namespace SaveEdit
                 MoveListViewItems((ListView)sender, MoveDirection.Down);
                 muze = true;
             }
+        }
+
+        private void seradit_Click(object sender, EventArgs e)
+        {
+            seznamBlocku.ListViewItemSorter = new ItemComparer();
+            seznamBlocku.Sort();
+        }
+    }
+
+    class ItemComparer : IComparer
+    {
+        public int Compare(object x, object y)
+        {
+            return string.Compare(((Tag)((ListViewItem)x).Tag).Item.Name, ((Tag)((ListViewItem)y).Tag).Item.Name);
         }
     }
 }

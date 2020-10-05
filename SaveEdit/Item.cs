@@ -26,6 +26,7 @@ namespace SaveEdit
             ZmenaBarev = canChangeColor;
             Banner = banner;
             Firework = firework;
+            Enchanty = new Dictionary<string, short>();
 
             NbtCompound item = new NbtCompound();
             item.Add(new NbtString("id", id));
@@ -42,6 +43,22 @@ namespace SaveEdit
                 else
                     item.Get<NbtCompound>("tag").Get<NbtInt>("Damage").Value = damage;
 
+                if (item.Get<NbtCompound>("tag").Get<NbtList>("Enchantments") != null)
+                {
+                    foreach (NbtCompound ench in item.Get<NbtCompound>("tag").Get<NbtList>("Enchantments"))
+                    {
+                        Enchanty.Add(ench.Get<NbtString>("id").Value, ench.Get<NbtShort>("lvl").Value);
+                    }
+                }
+
+                if (item.Get<NbtCompound>("tag").Get<NbtList>("StoredEnchantments") != null)
+                {
+                    foreach (NbtCompound ench in item.Get<NbtCompound>("tag").Get<NbtList>("StoredEnchantments"))
+                    {
+                        Enchanty.Add(ench.Get<NbtString>("id").Value, ench.Get<NbtShort>("lvl").Value);
+                    }
+                }
+
             }
 
             NbtItem = item;
@@ -57,12 +74,29 @@ namespace SaveEdit
         public Item(NbtCompound item, Form1 form)
         {
             NbtItem = item;
+            Enchanty = new Dictionary<string, short>();
             this.form = form;
             if (item.Get<NbtCompound>("tag") != null)
             {
                 Tag = item.Get<NbtCompound>("tag");
                 if (item.Get<NbtCompound>("tag").Get<NbtInt>("Damage") != null)
                     Damage = item.Get<NbtCompound>("tag").Get<NbtInt>("Damage").Value;
+
+                if(item.Get<NbtCompound>("tag").Get<NbtList>("Enchantments") != null)
+                {
+                    foreach(NbtCompound ench in item.Get<NbtCompound>("tag").Get<NbtList>("Enchantments"))
+                    {
+                        Enchanty.Add(ench.Get<NbtString>("id").Value, ench.Get<NbtShort>("lvl").Value);
+                    }
+                }
+
+                if (item.Get<NbtCompound>("tag").Get<NbtList>("StoredEnchantments") != null)
+                {
+                    foreach (NbtCompound ench in item.Get<NbtCompound>("tag").Get<NbtList>("StoredEnchantments"))
+                    {
+                        Enchanty.Add(ench.Get<NbtString>("id").Value, ench.Get<NbtShort>("lvl").Value);
+                    }
+                }
 
             }
             Slot = item.Get<NbtByte>("Slot").Value;
@@ -85,6 +119,7 @@ namespace SaveEdit
                 ImageInfo = tmp.ImageInfo;
                 Banner = tmp.Banner;
                 Firework = tmp.Firework;
+                Enchanty = tmp.Enchanty;
             }
             else
             {
@@ -107,6 +142,7 @@ namespace SaveEdit
                         tag = item.Get<NbtCompound>("tag");
                         if (item.Get<NbtCompound>("tag").Get<NbtInt>("Damage") != null)
                             damage = item.Get<NbtCompound>("tag").Get<NbtInt>("Damage").Value;
+
                     }
                     return new Item(((Tag)lvi.Tag).Item.Name, ((Tag)lvi.Tag).Item.ID, damage, ((Tag)lvi.Tag).Item.MaxDamage, ((Tag)lvi.Tag).Item.Stack, item.Get<NbtByte>("Count").Value, item.Get<NbtByte>("Slot").Value, tag, ((Tag)lvi.Tag).Item.Kategorie, ((Tag)lvi.Tag).Item.PovoleneSloty, ((Tag)lvi.Tag).Item.Image, form, ((Tag)lvi.Tag).Item.ZmenaBarev, ((Tag)lvi.Tag).Item.Banner, ((Tag)lvi.Tag).Item.Firework, ((Tag)lvi.Tag).Item.Vlastnosti, ((Tag)lvi.Tag).Item.Mandatory);
                 }
@@ -134,6 +170,21 @@ namespace SaveEdit
             return null;
         }
 
+        
+        public void AddEnchant(string enchantID, short level)
+        {
+            Enchanty.Add(enchantID, level);
+        }
+
+        public void RemoveEnchant(string enchantID)
+        {
+            Enchanty.Remove(enchantID);
+        }
+
+        public void EditEnchant(string enchantID, short level)
+        {
+            Enchanty[enchantID] = level;
+        }
 
         public void ChangeItemEditor(string name, string id, int maxDamage, byte stack, string imageInfo, string[] kategorie, byte[] povoleneSloty, bool canChangeColor, bool banner, bool firework, NbtCompound tag, List<string> mandatory, bool vlastnosti, Bitmap image, List<VerzeID> verzeID)
         {
@@ -306,6 +357,12 @@ namespace SaveEdit
         public List<string> Mandatory
         {
             get;
+            private set;
+        }
+
+        public Dictionary<string, short> Enchanty
+        {
+            get; 
             private set;
         }
 

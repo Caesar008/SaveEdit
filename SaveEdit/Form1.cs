@@ -42,6 +42,8 @@ namespace SaveEdit
         int itemNum = 0;
         int itemTotal = 0;
         NacitamSave nsStart = null;
+        internal List<Enchantment> enchanty = new List<Enchantment>();
+        internal List<string> enchantySpecialTag = new List<string>();
 
         #endregion
 
@@ -375,6 +377,10 @@ namespace SaveEdit
                             g.Dispose();
                             g = null;
                             //přidat nénchant pozadí když má Enchantments tag
+                            if (((Tag)c.Tag).Item.Enchanty != null && ((Tag)c.Tag).Item.Enchanty.Count > 0)
+                            {
+                                ((Button)c).Image = EnchantLabel((Bitmap)((Button)c).Image);
+                            }
                             break;
                         }
                     }
@@ -658,6 +664,8 @@ namespace SaveEdit
 
                 Log.Write("Loading itemy.xml", Log.Verbosity.Info);
                 XmlDocument xmlItemy = new XmlDocument();
+                enchanty = new List<Enchantment>();
+                enchantySpecialTag = new List<string>();
                 xmlItemy.Load("itemy.xml");
                 minMcVerze = int.Parse(xmlItemy.SelectSingleNode("Itemy/Minecraft").Attributes["min"].Value);
                 mcVerze = int.Parse(xmlItemy.SelectSingleNode("Itemy/Minecraft").Attributes["mc"].Value);
@@ -856,6 +864,38 @@ namespace SaveEdit
                     this.Invoke(new Action(() => seznamBlockuSearch.EndUpdate()));
                 }
                 //dokoncenoNacitaniBloku = true;
+
+                //Načtení enchantů
+                if (!InvokeRequired)
+                    nsStart.ReportProgress(-1, 100, 100);
+                else
+                    this.Invoke(new Action(() => nsStart.ReportProgress(-1, 100, 100)));
+
+                Log.Write("Loading enchantments", Log.Verbosity.Info);
+                List<string> allEnch = new List<string>();
+
+                XmlNodeList allEnchList = xmlItemy.SelectNodes("Itemy/Enchanty/AllEnchantments/ID");
+                foreach (XmlNode itemID in allEnchList)
+                    allEnch.Add(itemID.InnerText);
+
+                XmlNodeList specialEnchList = xmlItemy.SelectNodes("Itemy/Enchanty/SpecialTag/ID");
+                foreach (XmlNode itemID in specialEnchList)
+                    allEnch.Add(itemID.InnerText);
+
+                XmlNodeList enchantyXml = xmlItemy.SelectNodes("Itemy/Enchanty/Enchant");
+                foreach(XmlNode enchantNode in enchantyXml)
+                {
+                    Enchantment enchantment = new Enchantment(enchantNode.SelectSingleNode("Name").InnerText, enchantNode.SelectSingleNode("ID").InnerText, short.Parse(enchantNode.SelectSingleNode("MaxLevel").InnerText));
+                    foreach(XmlNode povoleneID in enchantNode.SelectNodes("Applicable/ID"))
+                    {
+                        enchantment.Add(povoleneID.InnerText);
+                    }
+                    foreach (string vsechnyEnch in allEnch)
+                        enchantment.Add(vsechnyEnch);
+                    enchanty.Add(enchantment);
+                }
+
+                Log.Write("Loading enchantments complete", Log.Verbosity.Info);
             }
             /*if (nacteno)
                 VyberItem(0);*/
@@ -1117,6 +1157,13 @@ namespace SaveEdit
                     else
                     {
                         //TODO: tady bude rozdělení a výběr toho, jaké okno vlastností se má otevřít. V prop. editor pak je které okno.
+                        if(((Tag)c.Tag).Item.Banner)
+                            editor = "banner";
+                        else if(((Tag)c.Tag).Item.Firework)
+                            editor = "firework";
+                        else
+                            editor = "item";
+
                         vlastnosti.Enabled = true;
                         itemToEdit = ((Tag)c.Tag).Item;
                     }

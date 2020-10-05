@@ -36,7 +36,18 @@ namespace SaveEdit
                 Process.Start("DllUpdater.exe", "firstRun");
                 Application.Exit();
             }
-            if (!File.Exists("CZ.xml") || Application.ProductVersion.Contains("dev"))
+            if(Application.ProductVersion.Contains("dev"))
+            {
+                try 
+                {
+                    Log.Write("Copying CZ.xml", Log.Verbosity.Info);
+                    File.Copy("..\\..\\CZ.xml", "CZ.xml", true); 
+                } catch (Exception e)
+                { 
+                    Log.Write("CZ.xml copy failed\r\n" + e.Message, Log.Verbosity.Error); 
+                };
+            }
+            if (!File.Exists("CZ.xml"))
             {
                 try
                 {

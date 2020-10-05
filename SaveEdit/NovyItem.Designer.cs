@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("stavebni");
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("dekorace");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("redstone");
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("doprava");
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("ruzne");
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem("jidlo");
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem("nastroje");
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem("bojove");
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem("lektvary");
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem("materialy");
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem("rostliny");
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Helma");
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Tělo");
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("Nohy");
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Boty");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("stavebni");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("dekorace");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("redstone");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("doprava");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("ruzne");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("jidlo");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("nastroje");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("bojove");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("lektvary");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("materialy");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("rostliny");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Helma");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Tělo");
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("Nohy");
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Boty");
             this.seznamBlocku = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ulozit = new System.Windows.Forms.Button();
@@ -79,6 +79,7 @@
             this.fireworkBox = new System.Windows.Forms.CheckBox();
             this.maxDamageUpDown = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
+            this.seradit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imageFile)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview)).BeginInit();
@@ -314,29 +315,29 @@
             this.kategorie.CheckBoxes = true;
             this.kategorie.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.kategorie.HideSelection = false;
-            listViewItem16.StateImageIndex = 0;
-            listViewItem17.StateImageIndex = 0;
-            listViewItem18.StateImageIndex = 0;
-            listViewItem19.StateImageIndex = 0;
-            listViewItem20.StateImageIndex = 0;
-            listViewItem21.StateImageIndex = 0;
-            listViewItem22.StateImageIndex = 0;
-            listViewItem23.StateImageIndex = 0;
-            listViewItem24.StateImageIndex = 0;
-            listViewItem25.StateImageIndex = 0;
-            listViewItem26.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
+            listViewItem3.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
+            listViewItem5.StateImageIndex = 0;
+            listViewItem6.StateImageIndex = 0;
+            listViewItem7.StateImageIndex = 0;
+            listViewItem8.StateImageIndex = 0;
+            listViewItem9.StateImageIndex = 0;
+            listViewItem10.StateImageIndex = 0;
+            listViewItem11.StateImageIndex = 0;
             this.kategorie.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem16,
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20,
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24,
-            listViewItem25,
-            listViewItem26});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11});
             this.kategorie.Location = new System.Drawing.Point(6, 19);
             this.kategorie.Name = "kategorie";
             this.kategorie.Size = new System.Drawing.Size(315, 78);
@@ -415,15 +416,15 @@
             this.sloty.CheckBoxes = true;
             this.sloty.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.sloty.HideSelection = false;
-            listViewItem27.StateImageIndex = 0;
-            listViewItem28.StateImageIndex = 0;
-            listViewItem29.StateImageIndex = 0;
-            listViewItem30.StateImageIndex = 0;
+            listViewItem12.StateImageIndex = 0;
+            listViewItem13.StateImageIndex = 0;
+            listViewItem14.StateImageIndex = 0;
+            listViewItem15.StateImageIndex = 0;
             this.sloty.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem27,
-            listViewItem28,
-            listViewItem29,
-            listViewItem30});
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15});
             this.sloty.Location = new System.Drawing.Point(6, 19);
             this.sloty.Name = "sloty";
             this.sloty.Size = new System.Drawing.Size(315, 51);
@@ -503,11 +504,22 @@
             this.label8.TabIndex = 86;
             this.label8.Text = "Max damage";
             // 
+            // seradit
+            // 
+            this.seradit.Location = new System.Drawing.Point(739, 551);
+            this.seradit.Name = "seradit";
+            this.seradit.Size = new System.Drawing.Size(103, 23);
+            this.seradit.TabIndex = 87;
+            this.seradit.Text = "Seřadit";
+            this.seradit.UseVisualStyleBackColor = true;
+            this.seradit.Click += new System.EventHandler(this.seradit_Click);
+            // 
             // NovyItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1055, 615);
+            this.Controls.Add(this.seradit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.maxDamageUpDown);
             this.Controls.Add(this.fireworkBox);
@@ -588,5 +600,6 @@
         private System.Windows.Forms.CheckBox fireworkBox;
         private System.Windows.Forms.NumericUpDown maxDamageUpDown;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button seradit;
     }
 }
