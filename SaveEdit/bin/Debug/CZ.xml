@@ -20,5 +20,6 @@
   </MainWindow>
   <NbtEditor>
     <Caption en="Item properties - NBT Editor">Vlastnosti itemu - NBT Editor</Caption>
+    <EditValues en="Edit values">Upravit hodnoty</EditValues>
   </NbtEditor>
 </Language>

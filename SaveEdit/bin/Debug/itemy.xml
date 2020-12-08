@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Itemy>
   <Verze>50000</Verze>
-  <Minecraft mc="2580" min="1499">Minecraft Java edition 1.16.3</Minecraft>
-  <Itemy total="1139">
+  <Minecraft mc="2685" min="1499">Minecraft Java edition 1.17 (20w49a)</Minecraft>
+  <Itemy total="1202">
     <Item>
       <ID>minecraft:acacia_boat</ID>
       <Name>Acacia Boat</Name>
@@ -74,8 +74,8 @@
       <Name>Acacia Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>23</X>
-        <Y>17</Y>
+        <X>21</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -107,8 +107,8 @@
       <Name>Acacia Sapling</Name>
       <Stack>64</Stack>
       <Image>
-        <X>21</X>
-        <Y>16</Y>
+        <X>7</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -166,8 +166,8 @@
       <Name>Acacia Wood</Name>
       <Stack>64</Stack>
       <Image>
-        <X>22</X>
-        <Y>17</Y>
+        <X>20</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -177,22 +177,44 @@
       <Name>Activator Rail</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>15</Y>
+        <X>16</X>
+        <Y>74</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>doprava;redstone</Kategorie>
+      <Kategorie>redstone;doprava</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:allium</ID>
       <Name>Allium</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>17</Y>
+        <X>10</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:amethyst_cluster</ID>
+      <Name>Amethyst Cluster</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>8</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;materialy</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:amethyst_shard</ID>
+      <Name>Amethyst Shard</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>53</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>materialy</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:ancient_debris</ID>
@@ -276,8 +298,8 @@
       <Name>Anvil</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>11</Y>
+        <X>13</X>
+        <Y>64</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;ruzne</Kategorie>
@@ -894,8 +916,8 @@
       <Name>Azure Bluet</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>17</Y>
+        <X>11</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -1004,8 +1026,8 @@
       <Name>Barrier</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>2</Y>
+        <X>20</X>
+        <Y>77</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
@@ -1037,8 +1059,8 @@
       <Name>Beacon</Name>
       <Stack>64</Stack>
       <Image>
-        <X>21</X>
-        <Y>11</Y>
+        <X>6</X>
+        <Y>78</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
@@ -1048,8 +1070,8 @@
       <Name>Bedrock</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>2</Y>
+        <X>21</X>
+        <Y>52</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1202,8 +1224,8 @@
       <Name>Birch Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>20</X>
-        <Y>17</Y>
+        <X>24</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1235,8 +1257,8 @@
       <Name>Birch Sapling</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>5</Y>
+        <X>8</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -1294,8 +1316,8 @@
       <Name>Birch Wood</Name>
       <Stack>64</Stack>
       <Image>
-        <X>6</X>
-        <Y>8</Y>
+        <X>23</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -1319,6 +1341,17 @@
         <X>10</X>
         <Y>66</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:black_candle</ID>
+      <Name>Black Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -1521,6 +1554,17 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:amethyst_block</ID>
+      <Name>Block of Amethyst</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:coal_block</ID>
       <Name>Block of Coal</Name>
       <Stack>64</Stack>
@@ -1631,6 +1675,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:blue_candle</ID>
+      <Name>Blue Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:blue_carpet</ID>
       <Name>Blue Carpet</Name>
       <Stack>64</Stack>
@@ -1701,8 +1756,8 @@
       <Name>Blue Orchid</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>17</Y>
+        <X>12</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -1778,8 +1833,8 @@
       <Name>Bone Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
-        <Y>24</Y>
+        <X>22</X>
+        <Y>52</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -1993,6 +2048,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:brown_candle</ID>
+      <Name>Brown Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:brown_carpet</ID>
       <Name>Brown Carpet</Name>
       <Stack>64</Stack>
@@ -2052,8 +2118,8 @@
       <Name>Brown Mushroom</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>2</Y>
+        <X>19</X>
+        <Y>72</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -2063,8 +2129,8 @@
       <Name>Brown Mushroom Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>15</X>
-        <Y>8</Y>
+        <X>20</X>
+        <Y>72</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -2213,6 +2279,31 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:budding_amethyst</ID>
+      <Name>Budding Amethyst</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>10</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:bundle</ID>
+      <Name>Bundle</Name>
+      <Stack>1</Stack>
+      <Tag>
+        <Value type="list" name="Items" req="1" />
+      </Tag>
+      <Image>
+        <X>4</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>ruzne;nastroje</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:cactus</ID>
       <Name>Cactus</Name>
       <Stack>64</Stack>
@@ -2235,6 +2326,17 @@
       <Kategorie>jidlo</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:calcite</ID>
+      <Name>Calcite</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:campfire</ID>
       <Name>Campfire</Name>
       <Stack>64</Stack>
@@ -2244,6 +2346,17 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;ruzne</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:candle</ID>
+      <Name>Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>5</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:carrot</ID>
@@ -2398,8 +2511,8 @@
       <Name>Cobblestone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>2</Y>
+        <X>3</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -2431,8 +2544,8 @@
       <Name>Cobblestone Wall</Name>
       <Stack>64</Stack>
       <Image>
-        <X>22</X>
-        <Y>9</Y>
+        <X>23</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -2442,8 +2555,8 @@
       <Name>Cobweb</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>1</Y>
+        <X>8</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>redstone</Kategorie>
@@ -2601,6 +2714,39 @@
         <File>items.png</File>
       </Image>
       <Kategorie>jidlo</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:copper_block</ID>
+      <Name>Copper Block</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:copper_ingot</ID>
+      <Name>Copper Ingot</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>materialy</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:copper_ore</ID>
+      <Name>Copper Ore</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>12</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;materialy</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:cornflower</ID>
@@ -2882,6 +3028,39 @@
       <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:cut_copper</ID>
+      <Name>Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:cut_copper_slab</ID>
+      <Name>Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:cut_copper_stairs</ID>
+      <Name>Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:cut_red_sandstone</ID>
       <Name>Cut Red Sandstone</Name>
       <Stack>64</Stack>
@@ -2944,6 +3123,17 @@
         <X>7</X>
         <Y>67</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:cyan_candle</ID>
+      <Name>Cyan Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -3062,8 +3252,8 @@
       <Name>Damaged Anvil</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>11</Y>
+        <X>13</X>
+        <Y>64</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;ruzne</Kategorie>
@@ -3073,8 +3263,8 @@
       <Name>Dandelion</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>1</Y>
+        <X>13</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -3150,8 +3340,8 @@
       <Name>Dark Oak Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>18</Y>
+        <X>3</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -3183,8 +3373,8 @@
       <Name>Dark Oak Sapling</Name>
       <Stack>64</Stack>
       <Image>
-        <X>22</X>
-        <Y>16</Y>
+        <X>9</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -3242,8 +3432,8 @@
       <Name>Dark Oak Wood</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
-        <Y>17</Y>
+        <X>2</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -3253,8 +3443,8 @@
       <Name>Dark Prismarine</Name>
       <Stack>64</Stack>
       <Image>
-        <X>5</X>
-        <Y>21</Y>
+        <X>9</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -3363,8 +3553,8 @@
       <Name>Dead Bush</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>4</Y>
+        <X>2</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -3484,11 +3674,11 @@
       <Name>Detector Rail</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>13</Y>
+        <X>9</X>
+        <Y>75</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>doprava;redstone</Kategorie>
+      <Kategorie>redstone;doprava</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:diamond</ID>
@@ -3810,6 +4000,17 @@
       <Kategorie>ruzne;materialy</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:dripstone_block</ID>
+      <Name>Dripstone Block</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>8</X>
+        <Y>4</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:dropper</ID>
       <Name>Dropper</Name>
       <Stack>64</Stack>
@@ -3929,8 +4130,8 @@
       <Name>End Rod</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>16</Y>
+        <X>14</X>
+        <Y>77</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -3984,8 +4185,8 @@
       <Name>End Stone Bricks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>12</Y>
+        <X>10</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -3995,8 +4196,8 @@
       <Name>Ender Chest</Name>
       <Stack>64</Stack>
       <Image>
-        <X>23</X>
-        <Y>6</Y>
+        <X>11</X>
+        <Y>65</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -4127,8 +4328,8 @@
       <Name>Fern</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>4</Y>
+        <X>3</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -4375,11 +4576,11 @@
       <Name>Glowstone</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>7</Y>
+        <X>11</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:glowstone_dust</ID>
@@ -4708,6 +4909,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:gray_candle</ID>
+      <Name>Gray Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>8</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:gray_carpet</ID>
       <Name>Gray Carpet</Name>
       <Stack>64</Stack>
@@ -4836,6 +5048,17 @@
         <X>21</X>
         <Y>67</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:green_candle</ID>
+      <Name>Green Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -5079,8 +5302,8 @@
       <Name>Hopper</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>12</Y>
+        <X>12</X>
+        <Y>75</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>redstone</Kategorie>
@@ -5157,7 +5380,7 @@
       <Stack>64</Stack>
       <Image>
         <X>4</X>
-        <Y>24</Y>
+        <Y>75</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
@@ -5264,8 +5487,8 @@
       <Name>Chipped Anvil</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>11</Y>
+        <X>13</X>
+        <Y>64</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;ruzne</Kategorie>
@@ -5374,11 +5597,11 @@
       <Name>Ice</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>5</Y>
+        <X>10</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:infested_cobblestone</ID>
@@ -5477,8 +5700,8 @@
       <Name>Iron Bars</Name>
       <Stack>64</Stack>
       <Image>
-        <X>6</X>
-        <Y>6</Y>
+        <X>15</X>
+        <Y>57</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -5667,11 +5890,11 @@
       <Name>Iron Trapdoor</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>20</Y>
+        <X>15</X>
+        <Y>75</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:item_frame</ID>
@@ -5711,8 +5934,8 @@
       <Name>Jukebox</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>5</Y>
+        <X>14</X>
+        <Y>65</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -5788,8 +6011,8 @@
       <Name>Jungle Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>21</X>
-        <Y>17</Y>
+        <X>6</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -5821,8 +6044,8 @@
       <Name>Jungle Sapling</Name>
       <Stack>64</Stack>
       <Image>
-        <X>15</X>
-        <Y>2</Y>
+        <X>10</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -5880,8 +6103,8 @@
       <Name>Jungle Wood</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>10</Y>
+        <X>5</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -5916,8 +6139,8 @@
       <Name>Ladder</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>6</Y>
+        <X>16</X>
+        <Y>57</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -5949,8 +6172,8 @@
       <Name>Lapis Lazuli Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>10</Y>
+        <X>10</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -5967,12 +6190,23 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:large_amethyst_bud</ID>
+      <Name>Large Amethyst Bud</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;materialy</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:large_fern</ID>
       <Name>Large Fern</Name>
       <Stack>64</Stack>
       <Image>
-        <X>15</X>
-        <Y>17</Y>
+        <X>5</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -6115,8 +6349,8 @@
       <Name>Lever</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>7</Y>
+        <X>19</X>
+        <Y>75</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>redstone</Kategorie>
@@ -6140,6 +6374,17 @@
         <X>4</X>
         <Y>68</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:light_blue_candle	</ID>
+      <Name>Light Blue Candle	</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>10</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -6276,6 +6521,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:light_gray_candle</ID>
+      <Name>Light Gray Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:light_gray_carpet</ID>
       <Name>Light Gray Carpet</Name>
       <Stack>64</Stack>
@@ -6397,12 +6653,67 @@
       <Kategorie>redstone</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:lightly_weathered_copper_block</ID>
+      <Name>Lightly Weathered Copper Block</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:lightly_weathered_cut_copper</ID>
+      <Name>Lightly Weathered Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:lightly_weathered_cut_copper_slab</ID>
+      <Name>Lightly Weathered Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:lightly_weathered_cut_copper_stairs</ID>
+      <Name>Lightly Weathered Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:lightning_rod</ID>
+      <Name>Lightning Rod</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>17</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:lilac</ID>
       <Name>Lilac</Name>
       <Stack>64</Stack>
       <Image>
-        <X>11</X>
-        <Y>17</Y>
+        <X>15</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -6448,6 +6759,17 @@
         <X>18</X>
         <Y>68</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:lime_candle</ID>
+      <Name>Lime Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>12</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -7163,6 +7485,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:magenta_candle</ID>
+      <Name>Magenta Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>13</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:magenta_carpet</ID>
       <Name>Magenta Carpet</Name>
       <Stack>64</Stack>
@@ -7277,8 +7610,8 @@
       <Name>Magma Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>23</X>
-        <Y>23</Y>
+        <X>16</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -7317,12 +7650,23 @@
       <Kategorie>doprava;ruzne</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:medium_amethyst_bud</ID>
+      <Name>Medium Amethyst Bud</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>18</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;materialy</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:melon</ID>
       <Name>Melon</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>9</Y>
+        <X>13</X>
+        <Y>73</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -7475,8 +7819,8 @@
       <Name>Mossy Cobblestone Wall</Name>
       <Stack>64</Stack>
       <Image>
-        <X>23</X>
-        <Y>9</Y>
+        <X>2</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -7583,8 +7927,8 @@
       <Name>Mushroom Stem</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>9</Y>
+        <X>15</X>
+        <Y>73</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -7836,8 +8180,8 @@
       <Name>Nether Bricks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>15</Y>
+        <X>13</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -7869,8 +8213,8 @@
       <Name>Nether Quartz Ore</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>12</Y>
+        <X>3</X>
+        <Y>59</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -7913,8 +8257,8 @@
       <Name>Nether Wart Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
-        <Y>22</Y>
+        <X>20</X>
+        <Y>88</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -8085,11 +8429,11 @@
       <Name>Netherrack</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>7</Y>
+        <X>20</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:note_block</ID>
@@ -8173,8 +8517,8 @@
       <Name>Oak Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>6</X>
-        <Y>2</Y>
+        <X>9</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -8206,8 +8550,8 @@
       <Name>Oak Sapling</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>1</Y>
+        <X>11</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -8250,11 +8594,11 @@
       <Name>Oak Trapdoor</Name>
       <Stack>64</Stack>
       <Image>
-        <X>5</X>
-        <Y>6</Y>
+        <X>2</X>
+        <Y>76</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:oak_bark</ID>
@@ -8323,6 +8667,17 @@
         <X>8</X>
         <Y>69</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:orange_candle</ID>
+      <Name>Orange Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -8452,8 +8807,8 @@
       <Name>Oxeye Daisy</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>17</Y>
+        <X>17</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -8463,11 +8818,11 @@
       <Name>Packed Ice</Name>
       <Stack>64</Stack>
       <Image>
-        <X>18</X>
-        <Y>17</Y>
+        <X>22</X>
+        <Y>53</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:painting</ID>
@@ -8518,8 +8873,8 @@
       <Name>Peony</Name>
       <Stack>64</Stack>
       <Image>
-        <X>13</X>
-        <Y>17</Y>
+        <X>18</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -8620,6 +8975,17 @@
         <X>15</X>
         <Y>69</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:pink_candle</ID>
+      <Name>Pink Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>54</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -8749,8 +9115,8 @@
       <Name>Piston</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>7</Y>
+        <X>5</X>
+        <Y>76</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>redstone</Kategorie>
@@ -8779,6 +9145,17 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:pointed_dripstone</ID>
+      <Name>Pointed Dripstone</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>4</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:poisonous_potato</ID>
@@ -9027,8 +9404,8 @@
       <Name>Poppy</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>17</Y>
+        <X>20</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -9577,23 +9954,34 @@
       <Kategorie>lektvary</Kategorie>
     </Item>
     <Item>
+      <ID>powder_snow_bucket</ID>
+      <Name>Powder Snow Bucket</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>6</X>
+        <Y>55</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace;ruzne</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:powered_rail</ID>
       <Name>Powered Rail</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>11</Y>
+        <X>12</X>
+        <Y>76</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>doprava;redstone</Kategorie>
+      <Kategorie>redstone;doprava</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:prismarine</ID>
       <Name>Prismarine</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>21</Y>
+        <X>1</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -9625,8 +10013,8 @@
       <Name>Prismarine Bricks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>4</X>
-        <Y>21</Y>
+        <X>14</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -9764,6 +10152,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:purple_candle</ID>
+      <Name>Purple Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>54</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:purple_carpet</ID>
       <Name>Purple Carpet</Name>
       <Stack>64</Stack>
@@ -9879,7 +10278,7 @@
       <Stack>64</Stack>
       <Image>
         <X>14</X>
-        <Y>13</Y>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -9889,8 +10288,8 @@
       <Name>Purpur Pillar</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>14</Y>
+        <X>15</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -10010,8 +10409,8 @@
       <Name>Rail</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>9</Y>
+        <X>15</X>
+        <Y>76</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>doprava</Kategorie>
@@ -10127,6 +10526,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:red_candle</ID>
+      <Name>Red Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>55</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:red_carpet</ID>
       <Name>Red Carpet</Name>
       <Stack>64</Stack>
@@ -10201,8 +10611,8 @@
       <Name>Red Mushroom Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>8</Y>
+        <X>3</X>
+        <Y>74</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -10245,8 +10655,8 @@
       <Name>Red Nether Bricks</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
-        <Y>23</Y>
+        <X>15</X>
+        <Y>61</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -10256,8 +10666,8 @@
       <Name>Red Sand</Name>
       <Stack>64</Stack>
       <Image>
-        <X>15</X>
-        <Y>1</Y>
+        <X>2</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -10448,7 +10858,7 @@
       <Stack>64</Stack>
       <Image>
         <X>4</X>
-        <Y>25</Y>
+        <Y>77</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
@@ -10469,8 +10879,8 @@
       <Name>Rose Bush</Name>
       <Stack>64</Stack>
       <Image>
-        <X>12</X>
-        <Y>17</Y>
+        <X>22</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -10513,8 +10923,8 @@
       <Name>Sand</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>2</Y>
+        <X>6</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -10617,6 +11027,50 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:semi_weathered_cut_copper_slab</ID>
+      <Name>Semi Weathered Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:semi_weathered_copper_block</ID>
+      <Name>Semi-Weathered Copper Block</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:semi_weathered_cut_copper</ID>
+      <Name>Semi-Weathered Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:semi_weathered_cut_copper_stairs</ID>
+      <Name>Semi-Weathered Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:shears</ID>
@@ -10774,6 +11228,17 @@
       <Kategorie>materialy</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:small_amethyst_bud</ID>
+      <Name>Small Amethyst Bud</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>21</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace;materialy</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:smithing_table</ID>
       <Name>Smithing Table</Name>
       <Stack>64</Stack>
@@ -10921,8 +11386,8 @@
       <Name>Snow</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>23</Y>
+        <X>12</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -10932,8 +11397,8 @@
       <Name>Snow Block</Name>
       <Stack>64</Stack>
       <Image>
-        <X>3</X>
-        <Y>5</Y>
+        <X>11</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -10976,11 +11441,11 @@
       <Name>Soul Sand</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>7</Y>
+        <X>14</X>
+        <Y>54</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:soul_soil</ID>
@@ -11009,8 +11474,8 @@
       <Name>Spawner</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>5</Y>
+        <X>16</X>
+        <Y>77</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
@@ -11676,8 +12141,8 @@
       <Name>Spruce Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>17</Y>
+        <X>12</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -11709,8 +12174,8 @@
       <Name>Spruce Sapling</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>4</Y>
+        <X>12</X>
+        <Y>60</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -11753,11 +12218,11 @@
       <Name>Spruce Trapdoor</Name>
       <Stack>64</Stack>
       <Image>
-        <X>20</X>
-        <Y>34</Y>
+        <X>8</X>
+        <Y>77</Y>
         <File>terrain.png</File>
       </Image>
-      <Kategorie>dekorace;stavebni</Kategorie>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:spruce_bark</ID>
@@ -11768,11 +12233,22 @@
       <Name>Spruce Wood</Name>
       <Stack>64</Stack>
       <Image>
-        <X>5</X>
-        <Y>8</Y>
+        <X>11</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:spyglass</ID>
+      <Name>Spyglass</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>4</X>
+        <Y>55</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>nastroje</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:squid_spawn_egg</ID>
@@ -11812,8 +12288,8 @@
       <Name>Sticky Piston</Name>
       <Stack>64</Stack>
       <Image>
-        <X>11</X>
-        <Y>7</Y>
+        <X>6</X>
+        <Y>76</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>redstone</Kategorie>
@@ -12041,8 +12517,8 @@
       <Name>Stripped Acacia Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>20</X>
-        <Y>35</Y>
+        <X>13</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -12067,8 +12543,8 @@
       <Name>Stripped Birch Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>23</X>
-        <Y>35</Y>
+        <X>14</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -12115,8 +12591,8 @@
       <Name>Stripped Dark Oak Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>2</X>
-        <Y>36</Y>
+        <X>15</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -12141,8 +12617,8 @@
       <Name>Stripped Jungle Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>5</X>
-        <Y>36</Y>
+        <X>16</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -12167,8 +12643,8 @@
       <Name>Stripped Oak Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>8</X>
-        <Y>36</Y>
+        <X>17</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -12193,8 +12669,8 @@
       <Name>Stripped Spruce Log</Name>
       <Stack>64</Stack>
       <Image>
-        <X>11</X>
-        <Y>36</Y>
+        <X>18</X>
+        <Y>55</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
@@ -12252,8 +12728,8 @@
       <Name>Structure Void</Name>
       <Stack>64</Stack>
       <Image>
-        <X>7</X>
-        <Y>3</Y>
+        <X>4</X>
+        <Y>1</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
@@ -12285,8 +12761,8 @@
       <Name>Sunflower</Name>
       <Stack>64</Stack>
       <Image>
-        <X>10</X>
-        <Y>17</Y>
+        <X>23</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -12318,8 +12794,8 @@
       <Name>Tall Grass</Name>
       <Stack>64</Stack>
       <Image>
-        <X>14</X>
-        <Y>17</Y>
+        <X>8</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
@@ -12351,8 +12827,8 @@
       <Name>Terracotta</Name>
       <Stack>64</Stack>
       <Image>
-        <X>19</X>
-        <Y>14</Y>
+        <X>10</X>
+        <Y>56</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
@@ -12400,12 +12876,23 @@
       <Kategorie>lektvary</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:tinted_glass</ID>
+      <Name>Tinted Glass</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:tnt</ID>
       <Name>TNT</Name>
       <Stack>64</Stack>
       <Image>
-        <X>9</X>
-        <Y>1</Y>
+        <X>4</X>
+        <Y>66</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;redstone</Kategorie>
@@ -12415,8 +12902,8 @@
       <Name>Torch</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>6</Y>
+        <X>7</X>
+        <Y>66</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -12474,8 +12961,8 @@
       <Name>Tripwire Hook</Name>
       <Stack>64</Stack>
       <Image>
-        <X>13</X>
-        <Y>11</Y>
+        <X>11</X>
+        <Y>77</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>redstone</Kategorie>
@@ -12534,6 +13021,17 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:tuff</ID>
+      <Name>Tuff</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>23</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:turtle_egg</ID>
@@ -12668,8 +13166,8 @@
       <Name>Vines</Name>
       <Stack>64</Stack>
       <Image>
-        <X>16</X>
-        <Y>9</Y>
+        <X>9</X>
+        <Y>71</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
@@ -12891,6 +13389,182 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:waxed_copper</ID>
+      <Name>Waxed Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_cut_copper</ID>
+      <Name>Waxed Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_cut_copper_slab</ID>
+      <Name>Waxed Cut Copper Slab‌[</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_cut_copper_stairs</ID>
+      <Name>Waxed Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>6</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_lightly_weathered_copper</ID>
+      <Name>Waxed Lightly Weathered Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_lightly_weathered_cut_copper</ID>
+      <Name>Waxed Lightly Weathered Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_lightly_weathered_cut_copper_slab</ID>
+      <Name>Waxed Lightly Weathered Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_lightly_weathered_cut_copper_stairs</ID>
+      <Name>Waxed Lightly Weathered Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_semi_weathered_cut_copper_slab</ID>
+      <Name>Waxed Semi Weathered Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_semi_weathered_copper</ID>
+      <Name>Waxed Semi-Weathered Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_semi_weathered_cut_copper</ID>
+      <Name>Waxed Semi-Weathered Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_semi_weathered_cut_copper_stairs</ID>
+      <Name>Waxed Semi-Weathered Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:weathered_copper_block</ID>
+      <Name>Weathered Copper Block</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:weathered_cut_copper</ID>
+      <Name>Weathered Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:weathered_cut_copper_slab</ID>
+      <Name>Weathered Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:weathered_cut_copper_stairs</ID>
+      <Name>Weathered Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:weeping_vines</ID>
       <Name>Weeping Vines</Name>
       <Stack>64</Stack>
@@ -12953,6 +13627,17 @@
         <X>12</X>
         <Y>70</Y>
         <File>terrain.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:white_candle</ID>
+      <Name>White Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>55</Y>
+        <File>items.png</File>
       </Image>
       <Kategorie>dekorace</Kategorie>
     </Item>
@@ -13251,6 +13936,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:yellow_candle</ID>
+      <Name>Yellow Candle</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>3</X>
+        <Y>55</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:yellow_carpet</ID>
       <Name>Yellow Carpet</Name>
       <Stack>64</Stack>
@@ -13431,98 +14127,4 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
   </Itemy>
-  <Enchanty>
-    <AllEnchantments>
-      <ID>minecraft:enchanted_book</ID>
-    </AllEnchantments>
-    <SpecialTag>
-      <ID>minecraft:enchanted_book</ID>
-    </SpecialTag>
-    <Enchant>
-      <ID>minecraft:aqua_affinity</ID>
-      <Name>Aqua Affinity</Name>
-      <MaxLevel>1</MaxLevel>
-      <Applicable>
-        <ID>minecraft:leather_helmet</ID>
-        <ID>minecraft:chainmail_helmet</ID>
-        <ID>minecraft:iron_helmet</ID>
-        <ID>minecraft:diamond_helmet</ID>
-        <ID>minecraft:golden_helmet</ID>
-        <ID>minecraft:netherite_helmet</ID>
-        <ID>minecraft:turtle_helmet</ID>
-      </Applicable>
-    </Enchant>
-    <Enchant>
-      <ID>minecraft:bane_of_arthropods</ID>
-      <Name>Bane of Anthropods</Name>
-      <MaxLevel>5</MaxLevel>
-      <Applicable>
-        <ID>minecraft:wooden_sword</ID>
-        <ID>minecraft:stone_sword</ID>
-        <ID>minecraft:iron_sword</ID>
-        <ID>minecraft:diamond_sword</ID>
-        <ID>minecraft:golden_sword</ID>
-        <ID>minecraft:netherite_sword</ID>
-        <ID>minecraft:wooden_axe</ID>
-        <ID>minecraft:stone_axe</ID>
-        <ID>minecraft:iron_axe</ID>
-        <ID>minecraft:diamond_axe</ID>
-        <ID>minecraft:golden_axe</ID>
-        <ID>minecraft:netherite_axe</ID>
-      </Applicable>
-    </Enchant>
-    <Enchant>
-      <ID>minecraft:blast_protection</ID>
-      <Name>Blast Protection</Name>
-      <MaxLevel>4</MaxLevel>
-      <Applicable>
-        <ID>minecraft:leather_helmet</ID>
-        <ID>minecraft:chainmail_helmet</ID>
-        <ID>minecraft:iron_helmet</ID>
-        <ID>minecraft:diamond_helmet</ID>
-        <ID>minecraft:golden_helmet</ID>
-        <ID>minecraft:netherite_helmet</ID>
-        <ID>minecraft:turtle_helmet</ID>
-        <ID>minecraft:leather_chestplate</ID>
-        <ID>minecraft:chainmail_chestplate</ID>
-        <ID>minecraft:iron_chestplate</ID>
-        <ID>minecraft:diamond_chestplate</ID>
-        <ID>minecraft:golden_chestplate</ID>
-        <ID>minecraft:netherite_chestplate</ID>
-        <ID>minecraft:leather_leggings</ID>
-        <ID>minecraft:chainmail_leggings</ID>
-        <ID>minecraft:iron_leggings</ID>
-        <ID>minecraft:diamond_leggings</ID>
-        <ID>minecraft:golden_leggings</ID>
-        <ID>minecraft:netherite_leggings</ID>
-        <ID>minecraft:leather_boots</ID>
-        <ID>minecraft:chainmail_boots</ID>
-        <ID>minecraft:iron_boots</ID>
-        <ID>minecraft:diamond_boots</ID>
-        <ID>minecraft:golden_boots</ID>
-        <ID>minecraft:netherite_boots</ID>
-      </Applicable>
-    </Enchant>
-    <Enchant>
-      <ID>minecraft:channeling</ID>
-      <Name>Channelingy</Name>
-      <MaxLevel>1</MaxLevel>
-      <Applicable>
-        <ID>minecraft:trident</ID>
-      </Applicable>
-    </Enchant>
-    <Enchant>
-      <ID>minecraft:cleaving</ID>
-      <Name>Cleaving</Name>
-      <MaxLevel>3</MaxLevel>
-      <Applicable>
-        <ID>minecraft:wooden_axe</ID>
-        <ID>minecraft:stone_axe</ID>
-        <ID>minecraft:iron_axe</ID>
-        <ID>minecraft:diamond_axe</ID>
-        <ID>minecraft:golden_axe</ID>
-        <ID>minecraft:netherite_axe</ID>
-      </Applicable>
-    </Enchant>
-  </Enchanty>
 </Itemy>

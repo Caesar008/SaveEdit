@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NbtEditor));
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.ok = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.rename = new System.Windows.Forms.ToolStripButton();
             this.edit = new System.Windows.Forms.ToolStripButton();
@@ -48,6 +47,7 @@
             this.addString = new System.Windows.Forms.ToolStripButton();
             this.addList = new System.Windows.Forms.ToolStripButton();
             this.addCompound = new System.Windows.Forms.ToolStripButton();
+            this.OK_button = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,17 +61,7 @@
             this.treeView1.Size = new System.Drawing.Size(351, 420);
             this.treeView1.TabIndex = 1;
             this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
-            // 
-            // ok
-            // 
-            this.ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.ok.Location = new System.Drawing.Point(288, 453);
-            this.ok.Name = "ok";
-            this.ok.Size = new System.Drawing.Size(75, 23);
-            this.ok.TabIndex = 2;
-            this.ok.Text = "OK";
-            this.ok.UseVisualStyleBackColor = true;
+            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
             // toolStrip1
             // 
@@ -238,13 +228,23 @@
             this.addCompound.Size = new System.Drawing.Size(23, 22);
             this.addCompound.Text = "Add Compound";
             // 
+            // OK_button
+            // 
+            this.OK_button.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.OK_button.Location = new System.Drawing.Point(288, 453);
+            this.OK_button.Name = "OK_button";
+            this.OK_button.Size = new System.Drawing.Size(75, 23);
+            this.OK_button.TabIndex = 4;
+            this.OK_button.Text = "OK";
+            this.OK_button.UseVisualStyleBackColor = true;
+            // 
             // NbtEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 488);
+            this.Controls.Add(this.OK_button);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.ok);
             this.Controls.Add(this.treeView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "NbtEditor";
@@ -259,7 +259,6 @@
         #endregion
 
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button ok;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton rename;
         private System.Windows.Forms.ToolStripButton edit;
@@ -277,5 +276,6 @@
         private System.Windows.Forms.ToolStripButton addString;
         private System.Windows.Forms.ToolStripButton addList;
         private System.Windows.Forms.ToolStripButton addCompound;
+        private System.Windows.Forms.Button OK_button;
     }
 }

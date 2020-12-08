@@ -76,6 +76,12 @@
     <Compile Include="NbtEditor.Designer.cs">
       <DependentUpon>NbtEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="NbtNodeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NbtNodeEdit.Designer.cs">
+      <DependentUpon>NbtNodeEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="NovyItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NbtEditor.resx">
       <DependentUpon>NbtEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NbtNodeEdit.resx">
+      <DependentUpon>NbtNodeEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NovyItem.resx">
       <DependentUpon>NovyItem.cs</DependentUpon>
