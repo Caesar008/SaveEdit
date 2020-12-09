@@ -129,7 +129,7 @@ namespace SaveEdit
         {
             if(neulozeno)
             {
-                DialogResult diagRes = MessageBox.Show("Chcete uložit?", "Neuloženo", MessageBoxButtons.YesNoCancel);
+                DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
                 if (diagRes == DialogResult.Yes)
                     Ulozit(true);
                 else if (diagRes == DialogResult.No)
@@ -304,6 +304,8 @@ namespace SaveEdit
             {
                 neulozeno = false;
                 this.Text = "SaveEdit";
+                Log.Write("Reverting changes made in file", Log.Verbosity.Info);
+                File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
             }
             else if (res == DialogResult.Yes)
                 Ulozit();
@@ -333,8 +335,24 @@ namespace SaveEdit
             file.SaveToFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", file.FileCompression);
         }
 
-        internal void Nacti(bool makeCopy = false)
+        internal void Nacti(bool makeCopy = false, bool ignorovatNeulozeno = false)
         {
+            if (neulozeno && !ignorovatNeulozeno)
+            {
+                DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
+                if (diagRes == DialogResult.Yes)
+                    Ulozit();
+                else if (diagRes == DialogResult.No)
+                {
+                    Log.Write("Reverting changes made in file", Log.Verbosity.Info);
+                    File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
             Log.Write("Loading save", Log.Verbosity.Info);
             NbtFile testFile = null;
             string player = string.Empty;
@@ -464,8 +482,24 @@ namespace SaveEdit
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
         }
 
-        void NactiCustom(bool makeCopy = false)
+        void NactiCustom(bool makeCopy = false, bool ignorovatNeulozeno = false)
         {
+            if (neulozeno && !ignorovatNeulozeno)
+            {
+                DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
+                if (diagRes == DialogResult.Yes)
+                    Ulozit();
+                else if (diagRes == DialogResult.No)
+                {
+                    Log.Write("Reverting changes made in file", Log.Verbosity.Info);
+                    File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
+                }
+                else
+                {
+                    return;
+                }
+            }
+
             Log.Write("Loading custom save file", Log.Verbosity.Info);
             NbtFile testFile = new NbtFile(vybranySave);
             fullPath = vybranySave;
@@ -1269,7 +1303,7 @@ namespace SaveEdit
                     {
                         Log.Write("Reverting changes made in NbtEditor", Log.Verbosity.Info);
                         File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", fullPath, true);
-                        Nacti();
+                        Nacti(false, false);
                     }
                     break;
                 default:
@@ -1278,7 +1312,7 @@ namespace SaveEdit
                     {
                         Log.Write("Reverting changes made in NbtEditor", Log.Verbosity.Info);
                         File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", fullPath, true);
-                        Nacti();
+                        Nacti(false, false);
                     }
                     break;
             }
@@ -1310,10 +1344,10 @@ namespace SaveEdit
         }
 
 
-        internal void Ulozit(bool closing = false)
+        internal void Ulozit(bool ignorovatNeulozeno = false)
         {
-            if (!closing)
-                neulozeno = true;
+            if (!ignorovatNeulozeno)
+                neulozeno = false;
 
             file.SaveToFile(fullPath, file.FileCompression);
         }

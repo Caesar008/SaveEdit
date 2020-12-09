@@ -2,7 +2,7 @@
 <Itemy>
   <Verze>50000</Verze>
   <Minecraft mc="2685" min="1499">Minecraft Java edition 1.17 (20w49a)</Minecraft>
-  <Itemy total="1202">
+  <Itemy total="1203">
     <Item>
       <ID>minecraft:acacia_boat</ID>
       <Name>Acacia Boat</Name>
@@ -10983,6 +10983,17 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:sculk_sensor</ID>
+      <Name>Sculk Sensor</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>2</X>
+        <Y>5</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>redstone</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:scute</ID>
