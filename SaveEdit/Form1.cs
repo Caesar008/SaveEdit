@@ -34,7 +34,7 @@ namespace SaveEdit
         internal bool en = true, dokoncenoNacitaniBloku = false, nacteno = false, naTlacitku = false;
         internal bool neulozeno = false, muzeHledat = false, toLoad = false, custom = false, zmena = true, canHide = true;
         string vybranySave, cesta, fullPath;
-        NbtFile file;
+        NbtFile file, testFile;
         NacitamSave ns = null;
         string editor = "";
         internal Item itemToEdit = null;
@@ -44,6 +44,7 @@ namespace SaveEdit
         NacitamSave nsStart = null;
         internal List<Enchantment> enchanty = new List<Enchantment>();
         internal List<string> enchantySpecialTag = new List<string>();
+        string tempFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile";
 
         #endregion
 
@@ -131,11 +132,11 @@ namespace SaveEdit
             {
                 DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
                 if (diagRes == DialogResult.Yes)
-                    Ulozit(true);
+                    Ulozit();
                 else if (diagRes == DialogResult.No)
                 {
-                    Log.Write("Reverting changes made in file", Log.Verbosity.Info);
-                    File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
+                    Log.Write("Removing WorkingFile without saving", Log.Verbosity.Info);
+                    File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile");
                 }
                 else
                 {
@@ -144,9 +145,9 @@ namespace SaveEdit
                 }
             }
 
-            Log.Write("Removing copy of untouched file", Log.Verbosity.Info);
-            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile"))
-                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile");
+            Log.Write("Removing copy of working file", Log.Verbosity.Info);
+            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile"))
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile");
             
             Log.Write("Removing last edit file", Log.Verbosity.Info);
             if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile"))
@@ -277,7 +278,7 @@ namespace SaveEdit
 
             if (!backgroundWorker2.IsBusy)
             {
-                    Nacti(true);
+                    Nacti();
                 if (ns != null)
                 {
                     foreach (Control c in this.Controls)
@@ -304,8 +305,8 @@ namespace SaveEdit
             {
                 neulozeno = false;
                 this.Text = "SaveEdit";
-                Log.Write("Reverting changes made in file", Log.Verbosity.Info);
-                File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
+                Log.Write("Removing WorkingFile without saving", Log.Verbosity.Info);
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile");
             }
             else if (res == DialogResult.Yes)
                 Ulozit();
@@ -335,52 +336,60 @@ namespace SaveEdit
             file.SaveToFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", file.FileCompression);
         }
 
-        internal void Nacti(bool makeCopy = false, bool ignorovatNeulozeno = false)
+        internal void Nacti(bool ignorovatNeulozeno = false)
         {
-            if (neulozeno && !ignorovatNeulozeno)
+            if (!ignorovatNeulozeno)
             {
-                DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
-                if (diagRes == DialogResult.Yes)
-                    Ulozit();
-                else if (diagRes == DialogResult.No)
+                if (neulozeno)
                 {
-                    Log.Write("Reverting changes made in file", Log.Verbosity.Info);
-                    File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
+                    DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
+                    if (diagRes == DialogResult.Yes)
+                        Ulozit();
+                    else if (diagRes == DialogResult.No)
+                    {
+                        Log.Write("Removing WorkingFile without saving", Log.Verbosity.Info);
+                        File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile");
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
+                Log.Write("Loading save", Log.Verbosity.Info);
+                testFile = null;
+                //string player = string.Empty;
+                if (!vybranySave.Contains(@".minecraft\saves"))
+                {
+                    Log.Write("Loading save " + vybranySave, Log.Verbosity.Info);
+                    testFile = new NbtFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\saves\" + vybranySave + @"\level.dat");
+
+                    Log.Write("Creating working copy file", Log.Verbosity.Info);
+                    if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile"))
+                        File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile");
+                    File.Copy(Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\saves\" + vybranySave + @"\playerdata")[0], tempFile);
+
+                    fullPath = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\saves\" + vybranySave + @"\playerdata")[0];
                 }
                 else
                 {
-                    return;
+                    Log.Write("Loading save " + vybranySave, Log.Verbosity.Info);
+                    fullPath = Directory.GetFiles(vybranySave + @"\playerdata")[0];
+                    testFile = new NbtFile(vybranySave + @"\level.dat");
                 }
-            }
+                File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile", fullPath);
 
-            Log.Write("Loading save", Log.Verbosity.Info);
-            NbtFile testFile = null;
-            string player = string.Empty;
-            if (!vybranySave.Contains(@".minecraft\saves"))
-            {
-                Log.Write("Loading save " + vybranySave, Log.Verbosity.Info);
-                testFile = new NbtFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\saves\" + vybranySave + @"\level.dat");
-                player = fullPath = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\.minecraft\saves\" + vybranySave + @"\playerdata")[0];
+                //tady bude kontrola verze.
+                //https://minecraft.gamepedia.com/Java_Edition_data_values#Protocol_and_data_versions
+                //minimální podporovaná verze uvedena v itemy.xml
             }
-            else
-            {
-                Log.Write("Loading save " + vybranySave, Log.Verbosity.Info);
-                player = fullPath = Directory.GetFiles(vybranySave + @"\playerdata")[0];
-                testFile = new NbtFile(vybranySave + @"\level.dat");
-            }
-            File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile", player);
-
-            //tady bude kontrola verze.
-            //https://minecraft.gamepedia.com/Java_Edition_data_values#Protocol_and_data_versions
-            //minimální podporovaná verze uvedena v itemy.xml
-
             Log.Write("Checking if save is from at least version " + minMcVerze, Log.Verbosity.Info);
             if (testFile.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Version") != null && testFile.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Version").Get<NbtInt>("Id").Value >= minMcVerze)
             {
                 saveVerze = testFile.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Version").Get<NbtInt>("Id").Value;
                 Log.Write("Save is version " + saveVerze, Log.Verbosity.Info);
 
-                file = new NbtFile(player);
+                file = new NbtFile(tempFile);
 
                 Log.Write("Loading inventory", Log.Verbosity.Info);
                 foreach (NbtCompound item in file.RootTag.Get<NbtList>("Inventory"))
@@ -436,14 +445,6 @@ namespace SaveEdit
                         }
                     }
                 }
-
-                if (makeCopy)
-                {
-                    Log.Write("Making copy of untouched file", Log.Verbosity.Info);
-                    if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile"))
-                        File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile");
-                    file.SaveToFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", file.FileCompression);
-                }
             }
             else
             {
@@ -472,8 +473,11 @@ namespace SaveEdit
             }*/
 
             nacteno = true;
-            i0.Focus();
-            i0.Select();
+            if (!ignorovatNeulozeno)
+            {
+                i0.Focus();
+                i0.Select();
+            }
 
             poNacteni.Dispose();
 
@@ -482,40 +486,42 @@ namespace SaveEdit
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
         }
 
-        void NactiCustom(bool makeCopy = false, bool ignorovatNeulozeno = false)
+        void NactiCustom(bool ignorovatNeulozeno = false)
         {
-            if (neulozeno && !ignorovatNeulozeno)
+            if (!ignorovatNeulozeno)
             {
-                DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
-                if (diagRes == DialogResult.Yes)
-                    Ulozit();
-                else if (diagRes == DialogResult.No)
+                if (neulozeno)
                 {
-                    Log.Write("Reverting changes made in file", Log.Verbosity.Info);
-                    File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", fullPath, true);
+                    DialogResult diagRes = MessageBox.Show(jazyk.ReturnPreklad("Messages/WannaSave", en), "SaveEdit", MessageBoxButtons.YesNoCancel);
+                    if (diagRes == DialogResult.Yes)
+                        Ulozit();
+                    else if (diagRes == DialogResult.No)
+                    {
+                        Log.Write("Removing WorkingFile without saving", Log.Verbosity.Info);
+                        File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\WorkingFile");
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
-                else
-                {
-                    return;
-                }
+
+                Log.Write("Loading custom save file", Log.Verbosity.Info);
+                NbtFile testFile = new NbtFile(vybranySave);
+                fullPath = vybranySave;
+                File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile", vybranySave);
+
+                //tady bude kontrola verze.
+                //https://minecraft.gamepedia.com/Java_Edition_data_values#Protocol_and_data_versions
+                //minimální podporovaná verze uvedena v itemy.xml
             }
-
-            Log.Write("Loading custom save file", Log.Verbosity.Info);
-            NbtFile testFile = new NbtFile(vybranySave);
-            fullPath = vybranySave;
-            File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastFile", vybranySave);
-
-            //tady bude kontrola verze.
-            //https://minecraft.gamepedia.com/Java_Edition_data_values#Protocol_and_data_versions
-            //minimální podporovaná verze uvedena v itemy.xml
-
             Log.Write("Checking if save is from at least version " + minMcVerze, Log.Verbosity.Info);
             if (testFile.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Version") != null && testFile.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Version").Get<NbtInt>("Id").Value >= minMcVerze)
             {
                 saveVerze = testFile.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Version").Get<NbtInt>("Id").Value;
                 Log.Write("Save is version " + saveVerze, Log.Verbosity.Info);
 
-                file = new NbtFile(vybranySave);
+                file = new NbtFile(tempFile);
 
                 Log.Write("Loading inventory", Log.Verbosity.Info);
                 foreach (NbtCompound item in file.RootTag.Get<NbtCompound>("Data").Get<NbtCompound>("Player").Get<NbtList>("Inventory"))
@@ -568,14 +574,6 @@ namespace SaveEdit
                         }
                     }
                 }
-
-                if (makeCopy)
-                {
-                    Log.Write("Making copy of untouched file", Log.Verbosity.Info);
-                    if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile"))
-                        File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile");
-                    file.SaveToFile(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\UntouchedFile", file.FileCompression);
-                }
             }
             else
             {
@@ -594,7 +592,11 @@ namespace SaveEdit
             }
 
             nacteno = true;
-            i0.Focus();
+            if (!ignorovatNeulozeno)
+            {
+                i0.Focus();
+                i0.Select();
+            }
 
             poNacteni.Dispose();
 
@@ -610,7 +612,7 @@ namespace SaveEdit
             ClearButtonsAndShowInfo();
             if (!backgroundWorker2.IsBusy)
             {
-                NactiCustom(true);
+                NactiCustom();
                 if (ns != null)
                 {
                     foreach (Control c in this.Controls)
@@ -673,9 +675,9 @@ namespace SaveEdit
             {
                 toLoad = false;
                 if (!custom)
-                    Nacti(true);
+                    Nacti();
                 else
-                    NactiCustom(true);
+                    NactiCustom();
                 if (ns != null)
                 {
                     foreach (Control c in this.Controls)
@@ -1302,8 +1304,8 @@ namespace SaveEdit
                     if(new NbtEditor(this).ShowDialog() != DialogResult.OK)
                     {
                         Log.Write("Reverting changes made in NbtEditor", Log.Verbosity.Info);
-                        File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", fullPath, true);
-                        Nacti(false, false);
+                        File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", tempFile, true);
+                        Nacti(true);
                     }
                     break;
                 default:
@@ -1311,8 +1313,8 @@ namespace SaveEdit
                     if(new NbtEditor(this).ShowDialog() != DialogResult.OK)
                     {
                         Log.Write("Reverting changes made in NbtEditor", Log.Verbosity.Info);
-                        File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", fullPath, true);
-                        Nacti(false, false);
+                        File.Copy(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\SaveEdit\LastEditFile", tempFile, true);
+                        Nacti(true);
                     }
                     break;
             }
@@ -1344,12 +1346,15 @@ namespace SaveEdit
         }
 
 
-        internal void Ulozit(bool ignorovatNeulozeno = false)
+        internal void Ulozit()
         {
-            if (!ignorovatNeulozeno)
-                neulozeno = false;
-
+            neulozeno = false;
             file.SaveToFile(fullPath, file.FileCompression);
+        }
+
+        internal void UlozitWorking()
+        {
+            file.SaveToFile(tempFile, file.FileCompression);
         }
 
         private void aktualizovatProgram_Click(object sender, System.EventArgs e)

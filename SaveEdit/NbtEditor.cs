@@ -333,8 +333,8 @@ namespace SaveEdit
                     treeView1.ExpandAll();
                     treeView1.SelectedNode = treeView1.TopNode;
                     edit.Enabled = false;
-                    form1.Ulozit(true);
-                    form1.Nacti(false, false);
+                    form1.UlozitWorking();
+                    form1.Nacti(true);
                     form1.neulozeno = true;
                 }
 
