@@ -11,6 +11,7 @@ using fNbt;
 using Rozsirujici;
 using System.IO;
 using System.Xml;
+using System.Net;
 
 namespace SaveEdit
 {
@@ -52,6 +53,7 @@ namespace SaveEdit
 
         public Form1()
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             Log.Write("Starting SaveEdit", Log.Verbosity.Info);
             Log.Write("Initializing components", Log.Verbosity.Info);
 
@@ -531,45 +533,7 @@ namespace SaveEdit
                         if (c.Tag != null && ((Tag)c.Tag).JeInvSlot && ((Tag)c.Tag).Slot == item.Get<NbtByte>("Slot").Value)
                         {
 
-                            ((Tag)c.Tag).Item = new Item(item, this);
-                            Log.Write("Loading item " + ((Tag)c.Tag).Item.ID + " into slot " + ((Tag)c.Tag).Slot, Log.Verbosity.Info);
-
-                            Bitmap b = new Bitmap(36, 36);
-                            Graphics g = Graphics.FromImage(b);
-                            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-                            g.DrawImage(Rozsirujici.Grafika.Obrazek.ResizeBMP(((Tag)c.Tag).Item.Image, 32, 32, Rozsirujici.Grafika.Obrazek.PomerStran.Originální, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor), 2, 3);
-                            //Bitmap img = Rozsirujici.Grafika.Obrazek.ResizeBMP(((Tag)c.Tag).Item.Image, 32, 32, Rozsirujici.Grafika.Obrazek.PomerStran.Originální, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
-                            float size = 13;
-                            int x, y;
-                            if (((Tag)c.Tag).Item.Count.ToString().Length == 2)
-                            {
-                                x = 15;
-                                y = 20;
-                            }
-                            else if (((Tag)c.Tag).Item.Count.ToString().Length == 1)
-                            {
-                                x = 24;
-                                y = 20;
-                            }
-                            else if (((Tag)c.Tag).Item.Count.ToString().Length == 3)
-                            {
-                                x = 6;
-                                y = 20;
-                            }
-                            else
-                            {
-                                x = 0;
-                                y = 0;
-                                size = 12.25f;
-                            }
-
-                            if (((Tag)c.Tag).Item.MaxDamage <= 0 || ((Tag)c.Tag).Item.Damage <= 0)
-                                ((Button)c).Image = Rozsirujici.Grafika.Obrazek.AddText(b, ((Tag)c.Tag).Item.Count.ToString(), Brushes.White, Color.Black, new FontFamily("Arial Black"), FontStyle.Bold, size, new Point(x, y));
-                            else
-                                ((Button)c).Image = DamageBar(Rozsirujici.Grafika.Obrazek.AddText(b, ((Tag)c.Tag).Item.Count.ToString(), Brushes.White, Color.Black, new FontFamily("Arial Black"), FontStyle.Bold, size, new Point(x, y)), ((Tag)c.Tag).Item.MaxDamage, ((Tag)c.Tag).Item.Damage);
-                            g.Dispose();
-                            g = null;
-                            //přidat nénchant pozadí když má Enchantments tag
+                            PridejObrazek(c, item);
                             break;
                         }
                     }
@@ -1156,27 +1120,34 @@ namespace SaveEdit
         {
             if (!naTlacitku)
             {
-                if (((Tag)((Button)sender).Tag).Item != null && ((Tag)((Button)sender).Tag).Item.Tag != null && ((Tag)((Button)sender).Tag).Item.Tag.Get<NbtCompound>("display") != null && ((Tag)((Button)sender).Tag).Item.Tag.Get<NbtCompound>("display").Get<NbtString>("Name") != null)
+                if ((((Tag)((Button)sender).Tag).Item == null) && popisek.GetToolTip((Button)sender) != null)
                 {
-                    popisek.SetToolTip((Control)sender, ((Tag)((Button)sender).Tag).Item.Tag.Get<NbtCompound>("display").Get<NbtString>("Name").Value);
+                    popisek.SetToolTip((Control)sender, null);
                 }
-                else if (((Tag)((Button)sender).Tag).Item != null)
+                else
                 {
-                    if (((Tag)((Button)sender).Tag).Item.Name != null)
-                        popisek.SetToolTip((Control)sender, ((Tag)((Button)sender).Tag).Item.Name);
-                    else
+                    if (((Tag)((Button)sender).Tag).Item != null && ((Tag)((Button)sender).Tag).Item.Tag != null && ((Tag)((Button)sender).Tag).Item.Tag.Get<NbtCompound>("display") != null && ((Tag)((Button)sender).Tag).Item.Tag.Get<NbtCompound>("display").Get<NbtString>("Name") != null)
                     {
-                        string text = ((Tag)((Button)sender).Tag).Item.ID;
-                        if (((Tag)((Button)sender).Tag).Item.Tag != null)
-                        {
-                            text += "\n" + ((Tag)((Button)sender).Tag).Item.Tag.ToString();
-                        }
-                        popisek.SetToolTip((Control)sender, text);
+                        popisek.SetToolTip((Control)sender, ((Tag)((Button)sender).Tag).Item.Tag.Get<NbtCompound>("display").Get<NbtString>("Name").Value);
                     }
+                    else if (((Tag)((Button)sender).Tag).Item != null)
+                    {
+                        if (((Tag)((Button)sender).Tag).Item.Name != null)
+                            popisek.SetToolTip((Control)sender, ((Tag)((Button)sender).Tag).Item.Name);
+                        else
+                        {
+                            string text = ((Tag)((Button)sender).Tag).Item.ID;
+                            if (((Tag)((Button)sender).Tag).Item.Tag != null)
+                            {
+                                text += "\n" + ((Tag)((Button)sender).Tag).Item.Tag.ToString();
+                            }
+                            popisek.SetToolTip((Control)sender, text);
+                        }
+                    }
+                    popisek.AutoPopDelay = 32000;
+                    popisek.ShowAlways = true;
+                    naTlacitku = true;
                 }
-                popisek.AutoPopDelay = 32000;
-                popisek.ShowAlways = true;
-                naTlacitku = true;
             }
         }
 
@@ -1357,6 +1328,71 @@ namespace SaveEdit
             file.SaveToFile(tempFile, file.FileCompression);
         }
 
+        private void Presun(object sender, DragEventArgs e)
+        {
+            Item data = (Item)e.Data.GetData(e.Data.GetFormats()[0]);
+            foreach (Control c in Controls)
+            {
+                if (c.Tag != null && ((Tag)c.Tag).JeInvSlot && ((Tag)c.Tag).Slot == data.Slot)
+                {
+                    ((Tag)((Button)c).Tag).Item = null;
+                    ((Button)c).Image = null;
+                    break;
+                }
+            }
+            data.ChangeSlot(((Tag)((Button)sender).Tag).Slot);
+            ((Tag)((Button)sender).Tag).Item = data;
+            ((Button)sender).Image = ((Tag)((Button)sender).Tag).Item.Image;
+            PridejObrazek((Control)sender, ((Tag)((Button)sender).Tag).Item.NbtItem);
+        }
+
+        void PridejObrazek(Control c, NbtCompound item)
+        {
+            ((Tag)c.Tag).Item = new Item(item, this);
+            Log.Write("Loading item " + ((Tag)c.Tag).Item.ID + " into slot " + ((Tag)c.Tag).Slot, Log.Verbosity.Info);
+
+            Bitmap b = new Bitmap(36, 36);
+            Graphics g = Graphics.FromImage(b);
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            g.DrawImage(Rozsirujici.Grafika.Obrazek.ResizeBMP(((Tag)c.Tag).Item.Image, 32, 32, Rozsirujici.Grafika.Obrazek.PomerStran.Originální, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor), 2, 3);
+            //Bitmap img = Rozsirujici.Grafika.Obrazek.ResizeBMP(((Tag)c.Tag).Item.Image, 32, 32, Rozsirujici.Grafika.Obrazek.PomerStran.Originální, System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor);
+            float size = 13;
+            int x, y;
+            if (((Tag)c.Tag).Item.Count.ToString().Length == 2)
+            {
+                x = 15;
+                y = 20;
+            }
+            else if (((Tag)c.Tag).Item.Count.ToString().Length == 1)
+            {
+                x = 24;
+                y = 20;
+            }
+            else if (((Tag)c.Tag).Item.Count.ToString().Length == 3)
+            {
+                x = 6;
+                y = 20;
+            }
+            else
+            {
+                x = 0;
+                y = 0;
+                size = 12.25f;
+            }
+
+            if (((Tag)c.Tag).Item.MaxDamage <= 0 || ((Tag)c.Tag).Item.Damage <= 0)
+                ((Button)c).Image = Rozsirujici.Grafika.Obrazek.AddText(b, ((Tag)c.Tag).Item.Count.ToString(), Brushes.White, Color.Black, new FontFamily("Arial Black"), FontStyle.Bold, size, new Point(x, y));
+            else
+                ((Button)c).Image = DamageBar(Rozsirujici.Grafika.Obrazek.AddText(b, ((Tag)c.Tag).Item.Count.ToString(), Brushes.White, Color.Black, new FontFamily("Arial Black"), FontStyle.Bold, size, new Point(x, y)), ((Tag)c.Tag).Item.MaxDamage, ((Tag)c.Tag).Item.Damage);
+            g.Dispose();
+            g = null;
+            //přidat nénchant pozadí když má Enchantments tag
+            if (((Tag)c.Tag).Item.Enchanty != null && ((Tag)c.Tag).Item.Enchanty.Count > 0)
+            {
+                ((Button)c).Image = EnchantLabel((Bitmap)((Button)c).Image);
+            }
+        }
+
         private void aktualizovatProgram_Click(object sender, System.EventArgs e)
         {
             
@@ -1490,11 +1526,6 @@ namespace SaveEdit
         private void xplevel_TextChanged(object sender, System.EventArgs e)
         {
 
-        }
-
-        private void Presun(object sender, DragEventArgs e)
-        {
-            
         }
     }
 }

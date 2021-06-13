@@ -2,7 +2,7 @@
 <Itemy>
   <Verze>50000</Verze>
   <Minecraft mc="2685" min="1499">Minecraft Java edition 1.17 (20w49a)</Minecraft>
-  <Itemy total="1203">
+  <Itemy total="1205">
     <Item>
       <ID>minecraft:acacia_boat</ID>
       <Name>Acacia Boat</Name>
@@ -912,6 +912,17 @@
       <Kategorie>lektvary</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:axolotl_spawn_egg</ID>
+      <Name>Axolotl Spawn Egg‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>7</X>
+        <Y>55</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>ruzne</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:azure_bluet</ID>
       <Name>Azure Bluet</Name>
       <Stack>64</Stack>
@@ -1576,6 +1587,17 @@
       <Kategorie>dekorace</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:copper_block</ID>
+      <Name>Block of Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>9</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:diamond_block</ID>
       <Name>Block of Diamond</Name>
       <Stack>64</Stack>
@@ -2235,6 +2257,17 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
     <Item>
+      <ID>minecraft:axolotl_bucket</ID>
+      <Name>Bucket of Axolotl‌</Name>
+      <Stack>1</Stack>
+      <Image>
+        <X>8</X>
+        <Y>55</Y>
+        <File>items.png</File>
+      </Image>
+      <Kategorie>ruzne</Kategorie>
+    </Item>
+    <Item>
       <ID>minecraft:cod_bucket</ID>
       <Name>Bucket of Cod</Name>
       <Stack>1</Stack>
@@ -2714,17 +2747,6 @@
         <File>items.png</File>
       </Image>
       <Kategorie>jidlo</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:copper_block</ID>
-      <Name>Copper Block</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>9</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:copper_ingot</ID>
@@ -4278,6 +4300,67 @@
         <File>items.png</File>
       </Image>
       <Kategorie>ruzne</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:exposed_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:lightly_weathered_copper_block</ID>
+        <ID minVerze="2690" maxVerze="2692">minecraft:exposed_copper_block</ID>
+        <ID minVerze="2692">minecraft:exposed_copper</ID>
+      </MultipleID>
+      <Name>Exposed Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>15</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:exposed_cut_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:lightly_weathered_cut_copper</ID>
+        <ID minVerze="2690">minecraft:exposed_cut_copper</ID>
+      </MultipleID>
+      <Name>Exposed Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>16</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:exposed_cut_copper_slab</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:lightly_weathered_cut_copper_slab</ID>
+        <ID minVerze="2690">minecraft:exposed_cut_copper_slab</ID>
+      </MultipleID>
+      <Name>Exposed Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>11</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:exposed_cut_copper_stairs</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:lightly_weathered_cut_copper_stairs</ID>
+        <ID minVerze="2690">minecraft:exposed_cut_copper_stairs</ID>
+      </MultipleID>
+      <Name>Exposed Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>14</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:ender_eye</ID>
@@ -6653,50 +6736,6 @@
       <Kategorie>redstone</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:lightly_weathered_copper_block</ID>
-      <Name>Lightly Weathered Copper Block</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>15</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:lightly_weathered_cut_copper</ID>
-      <Name>Lightly Weathered Cut Copper</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>16</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:lightly_weathered_cut_copper_slab</ID>
-      <Name>Lightly Weathered Cut Copper Slab‌</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>11</X>
-        <Y>2</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:lightly_weathered_cut_copper_stairs</ID>
-      <Name>Lightly Weathered Cut Copper Stairs‌</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>14</X>
-        <Y>2</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
       <ID>minecraft:lightning_rod</ID>
       <Name>Lightning Rod</Name>
       <Stack>64</Stack>
@@ -8812,6 +8851,67 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:oxidized_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_copper_block</ID>
+        <ID minVerze="2690" maxVerze="2692">minecraft:oxidized_copper_block</ID>
+        <ID minVerze="2692">minecraft:oxidized_copper</ID>
+      </MultipleID>
+      <Name>Oxidized Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:oxidized_cut_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_cut_copper</ID>
+        <ID minVerze="2690">minecraft:oxidized_cut_copper</ID>
+      </MultipleID>
+      <Name>Oxidized Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>1</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:oxidized_cut_copper_slab</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_cut_copper_slab</ID>
+        <ID minVerze="2690">minecraft:oxidized_cut_copper_slab</ID>
+      </MultipleID>
+      <Name>Oxidized Cut Copper Slab‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:oxidized_cut_copper_stairs</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_cut_copper_stairs</ID>
+        <ID minVerze="2690">minecraft:oxidized_cut_copper_stairs</ID>
+      </MultipleID>
+      <Name>Oxidized Cut Copper Stairs‌</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>24</X>
+        <Y>2</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:packed_ice</ID>
@@ -11038,50 +11138,6 @@
         <File>terrain.png</File>
       </Image>
       <Kategorie>dekorace;rostliny</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:semi_weathered_cut_copper_slab</ID>
-      <Name>Semi Weathered Cut Copper Slab‌</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>15</X>
-        <Y>2</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:semi_weathered_copper_block</ID>
-      <Name>Semi-Weathered Copper Block</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>19</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:semi_weathered_cut_copper</ID>
-      <Name>Semi-Weathered Cut Copper</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>20</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:semi_weathered_cut_copper_stairs</ID>
-      <Name>Semi-Weathered Cut Copper Stairs‌</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>19</X>
-        <Y>2</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:shears</ID>
@@ -13400,8 +13456,12 @@
       <Kategorie>ruzne</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_copper</ID>
-      <Name>Waxed Copper</Name>
+      <ID>minecraft:waxed_copper_block</ID>
+      <MultipleID>
+        <ID maxVerze="2692">minecraft:waxed_coppe</ID>
+        <ID minVerze="2692">minecraft:waxed_copper_block</ID>
+      </MultipleID>
+      <Name>Waxed Block of Copper</Name>
       <Stack>64</Stack>
       <Image>
         <X>9</X>
@@ -13423,7 +13483,7 @@
     </Item>
     <Item>
       <ID>minecraft:waxed_cut_copper_slab</ID>
-      <Name>Waxed Cut Copper Slab‌[</Name>
+      <Name>Waxed Cut Copper Slab</Name>
       <Stack>64</Stack>
       <Image>
         <X>3</X>
@@ -13444,8 +13504,12 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_lightly_weathered_copper</ID>
-      <Name>Waxed Lightly Weathered Copper</Name>
+      <ID>minecraft:waxed_exposed_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_lightly_weathered_copper</ID>
+        <ID minVerze="2690">minecraft:waxed_exposed_copper</ID>
+      </MultipleID>
+      <Name>Waxed Exposed Copper</Name>
       <Stack>64</Stack>
       <Image>
         <X>15</X>
@@ -13455,8 +13519,12 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_lightly_weathered_cut_copper</ID>
-      <Name>Waxed Lightly Weathered Cut Copper</Name>
+      <ID>minecraft:waxed_exposed_cut_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_lightly_weathered_cut_copper</ID>
+        <ID minVerze="2690">minecraft:waxed_exposed_cut_copper</ID>
+      </MultipleID>
+      <Name>Waxed Exposed Cut Copper</Name>
       <Stack>64</Stack>
       <Image>
         <X>16</X>
@@ -13466,8 +13534,12 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_lightly_weathered_cut_copper_slab</ID>
-      <Name>Waxed Lightly Weathered Cut Copper Slab‌</Name>
+      <ID>minecraft:waxed_exposed_cut_copper_slab</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_lightly_weathered_cut_copper_slab</ID>
+        <ID minVerze="2690">minecraft:waxed_exposed_cut_copper_slab</ID>
+      </MultipleID>
+      <Name>Waxed Exposed Cut Copper Slab‌</Name>
       <Stack>64</Stack>
       <Image>
         <X>11</X>
@@ -13477,8 +13549,12 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_lightly_weathered_cut_copper_stairs</ID>
-      <Name>Waxed Lightly Weathered Cut Copper Stairs‌</Name>
+      <ID>minecraft:waxed_exposed_cut_copper_stairs</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_lightly_weathered_cut_copper_stairs</ID>
+        <ID minVerze="2690">minecraft:waxed_exposed_cut_copper_stairs</ID>
+      </MultipleID>
+      <Name>Waxed Exposed Cut Copper Stairs‌</Name>
       <Stack>64</Stack>
       <Image>
         <X>14</X>
@@ -13488,8 +13564,42 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_semi_weathered_cut_copper_slab</ID>
-      <Name>Waxed Semi Weathered Cut Copper Slab‌</Name>
+      <ID>minecraft:waxed_weathered_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_semi_weathered_copper</ID>
+        <ID minVerze="2690">minecraft:waxed_weathered_copper</ID>
+      </MultipleID>
+      <Name>Waxed Weathered Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>19</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_weathered_cut_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_semi_weathered_cut_copper</ID>
+        <ID minVerze="2690">minecraft:waxed_weathered_cut_copper</ID>
+      </MultipleID>
+      <Name>Waxed Weathered Cut Copper</Name>
+      <Stack>64</Stack>
+      <Image>
+        <X>20</X>
+        <Y>1</Y>
+        <File>terrain.png</File>
+      </Image>
+      <Kategorie>stavebni;dekorace</Kategorie>
+    </Item>
+    <Item>
+      <ID>minecraft:waxed_weathered_cut_copper_slab</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_semi_weathered_cut_copper_slab</ID>
+        <ID minVerze="2690">minecraft:waxed_weathered_cut_copper_slab</ID>
+      </MultipleID>
+      <Name>Waxed Weathered Cut Copper Slab‌</Name>
       <Stack>64</Stack>
       <Image>
         <X>15</X>
@@ -13499,30 +13609,12 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:waxed_semi_weathered_copper</ID>
-      <Name>Waxed Semi-Weathered Copper</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>19</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:waxed_semi_weathered_cut_copper</ID>
-      <Name>Waxed Semi-Weathered Cut Copper</Name>
-      <Stack>64</Stack>
-      <Image>
-        <X>20</X>
-        <Y>1</Y>
-        <File>terrain.png</File>
-      </Image>
-      <Kategorie>stavebni;dekorace</Kategorie>
-    </Item>
-    <Item>
-      <ID>minecraft:waxed_semi_weathered_cut_copper_stairs</ID>
-      <Name>Waxed Semi-Weathered Cut Copper Stairs‌</Name>
+      <ID>minecraft:waxed_weathered_cut_copper_stairs</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:waxed_semi_weathered_cut_copper_stairs</ID>
+        <ID minVerze="2690">minecraft:waxed_weathered_cut_copper_stairs</ID>
+      </MultipleID>
+      <Name>Waxed Weathered Cut Copper Stairs‌</Name>
       <Stack>64</Stack>
       <Image>
         <X>19</X>
@@ -13532,11 +13624,16 @@
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
-      <ID>minecraft:weathered_copper_block</ID>
-      <Name>Weathered Copper Block</Name>
+      <ID>minecraft:weathered_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_copper_block</ID>
+        <ID minVerze="2690" maxVerze="2692">minecraft:weathered_copper_block</ID>
+        <ID minVerze="2692">minecraft:weathered_copper</ID>
+      </MultipleID>
+      <Name>Weathered Copper</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
+        <X>19</X>
         <Y>1</Y>
         <File>terrain.png</File>
       </Image>
@@ -13544,21 +13641,29 @@
     </Item>
     <Item>
       <ID>minecraft:weathered_cut_copper</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_cut_copper_block</ID>
+        <ID minVerze="2690">minecraft:weathered_cut_copper</ID>
+      </MultipleID>
       <Name>Weathered Cut Copper</Name>
       <Stack>64</Stack>
       <Image>
-        <X>1</X>
-        <Y>2</Y>
+        <X>20</X>
+        <Y>1</Y>
         <File>terrain.png</File>
       </Image>
       <Kategorie>stavebni;dekorace</Kategorie>
     </Item>
     <Item>
       <ID>minecraft:weathered_cut_copper_slab</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_cut_copper_slab</ID>
+        <ID minVerze="2690">minecraft:weathered_cut_copper_slab</ID>
+      </MultipleID>
       <Name>Weathered Cut Copper Slab‌</Name>
       <Stack>64</Stack>
       <Image>
-        <X>20</X>
+        <X>15</X>
         <Y>2</Y>
         <File>terrain.png</File>
       </Image>
@@ -13566,10 +13671,14 @@
     </Item>
     <Item>
       <ID>minecraft:weathered_cut_copper_stairs</ID>
+      <MultipleID>
+        <ID maxVerze="2690">minecraft:semi_weathered_cut_copper_stairs</ID>
+        <ID minVerze="2690">minecraft:weathered_cut_copper_stairs</ID>
+      </MultipleID>
       <Name>Weathered Cut Copper Stairs‌</Name>
       <Stack>64</Stack>
       <Image>
-        <X>24</X>
+        <X>19</X>
         <Y>2</Y>
         <File>terrain.png</File>
       </Image>
