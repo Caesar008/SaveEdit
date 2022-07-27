@@ -14,7 +14,7 @@ namespace DllUpdater
         [STAThread]
         static void Main(string[] args)
         {
-            if (args[0].ToLower() == "firstRun".ToLower())
+            if (args.Length>0 && args[0].ToLower() == "firstRun".ToLower())
             {
                 int i = 0;
 

@@ -30,26 +30,57 @@ namespace SaveEdit
         {
             if (progress >= 0)
             {
-                label1.Text = form.jazyk.ReturnPreklad("Messages/LoadingItems", form.en).Replace("{0}", item.ToString()).Replace("{1}", celkem.ToString());
+                if (!InvokeRequired)
+                    label1.Text = form.jazyk.ReturnPreklad("Messages/LoadingItems", form.en).Replace("{0}", item.ToString()).Replace("{1}", celkem.ToString());
+                else
+                    this.BeginInvoke(new Action(() => label1.Text = form.jazyk.ReturnPreklad("Messages/LoadingItems", form.en).Replace("{0}", item.ToString()).Replace("{1}", celkem.ToString())));
                 if (progressBar1.Style == ProgressBarStyle.Marquee)
-                    progressBar1.Style = ProgressBarStyle.Blocks;
+                { 
+                    if (!InvokeRequired)
+                        progressBar1.Style = ProgressBarStyle.Blocks;
+                    else
+                        this.BeginInvoke(new Action(() => progressBar1.Style = ProgressBarStyle.Blocks));
+                }
+
                 if (progress != 100)
                 {
                     if (progressBar1.Maximum != 101)
-                        progressBar1.Maximum = 101;
-                    progressBar1.Value = progress + 1;
+                    {
+                        if(!InvokeRequired)
+                            progressBar1.Maximum = 101;
+                        else
+                            this.BeginInvoke(new Action(() => progressBar1.Maximum = 101));
+                    }
+                    if(!InvokeRequired)
+                        progressBar1.Value = progress + 1;
+                    else
+                        this.BeginInvoke(new Action(() => progressBar1.Value = progress + 1));
                 }
                 else
                 {
-                    progressBar1.Value = progress + 1;
-                    progressBar1.Maximum = 100;
+                    if (!InvokeRequired)
+                    {
+                        this.BeginInvoke(new Action(() => progressBar1.Value = progress + 1));
+                        this.BeginInvoke(new Action(() => progressBar1.Maximum = 100));
+                    }
+                    else
+                    {
+                        this.BeginInvoke(new Action(() => progressBar1.Value = progress + 1));
+                        this.BeginInvoke(new Action(() => progressBar1.Maximum = 100));
+                    }
                 }
-                progressBar1.Value = progress;
+                if (!InvokeRequired)
+                    progressBar1.Value = progress;
+                else
+                    this.BeginInvoke(new Action(() => progressBar1.Value = progress));
             }
             else
             {
                 progressBar1.Style = ProgressBarStyle.Marquee;
-                label1.Text = "";
+                if (!InvokeRequired)
+                    label1.Text = "";
+                else
+                    this.BeginInvoke(new Action(() => label1.Text = ""));
             }
         }
     }
